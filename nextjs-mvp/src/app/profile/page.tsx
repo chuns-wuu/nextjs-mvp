@@ -1,4 +1,6 @@
 "use client";
+
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Page() {
@@ -6,10 +8,23 @@ export default function Page() {
   return (
     <div>
       Profile
-      <h1> Existing profiles:</h1>
-      <li onClick={() => router.push("/profile/1")}> Profile #1</li>
-      <li onClick={() => router.push("/profile/2")}> Profile #2</li>
-      <li onClick={() => router.push("/profile/3")}> Profile #3</li>
+      <h1 className="bg-green-600 text-white"> Existing profiles:</h1>
+      <Link 
+        scroll = {false}
+        href = {{
+          pathname: "/profile/1",
+          query: {
+            userName: "testUser",
+            person: JSON.stringify({
+              age: 18
+            })
+          }
+        }}
+      > 
+      Profile #1 
+      </Link>
+      <Link href="/profile/2"> Profile #2 </Link>
+      <Link href="/profile/3"> Profile #3 </Link>
     </div>
   )
 }
