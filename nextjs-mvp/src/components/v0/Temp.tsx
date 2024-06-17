@@ -22,31 +22,31 @@ export const Container: FC = () => {
     const [cards, setCards] = useState([
       {
         id: 1,
-        text: 'Write a cool JS library',
+        text: 'Communicate',
       },
       {
         id: 2,
-        text: 'Make it generic enough',
+        text: 'Rollback',
       },
       {
         id: 3,
-        text: 'Write README',
+        text: 'Auto-scale',
       },
       {
         id: 4,
-        text: 'Create some examples',
+        text: 'Escalate',
       },
       {
         id: 5,
-        text: 'Spam in Twitter and IRC to promote it (note that this element is taller than the others)',
+        text: 'Access request',
       },
       {
         id: 6,
-        text: '???',
+        text: 'Log check',
       },
       {
         id: 7,
-        text: 'PROFIT',
+        text: 'Communicate',
       },
     ])
 

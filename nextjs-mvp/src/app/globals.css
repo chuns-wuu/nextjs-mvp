@@ -64,9 +64,7 @@
       --input: 217.2 32.6% 17.5%;
       --ring: 212.7 26.8% 83.9%;
     }
-  }
 
-  @layer base {
     * {
       @apply border-border;
     }
@@ -84,4 +82,20 @@
       @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
     }
 
+    .logo-banner {
+      overflow: hidden;
+      width: 100%;
+      white-space: nowrap;
+    }
+    
+    .logo-banner-track {
+      display: flex;
+      width: 19%;
+    }
+    
+    .logo {
+      width: 100px; /* Adjust the size as needed */
+      margin-right: 20px; /* Adjust the spacing as needed */
+    }
+    
   }

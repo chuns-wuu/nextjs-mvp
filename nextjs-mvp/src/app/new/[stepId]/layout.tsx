@@ -4,8 +4,9 @@ export default function StepLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <section>
+    <div>
       {children}
-    </section>
+    </div>
+    
   )
 }
