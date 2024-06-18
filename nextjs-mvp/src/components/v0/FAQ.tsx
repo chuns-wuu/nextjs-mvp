@@ -1,107 +1,91 @@
 /**
  * v0 by Vercel.
- * @see https://v0.dev/t/fHNU553brWd
+ * @see https://v0.dev/t/7sZ3u0ps2DG
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
-import { Collapsible, CollapsibleTrigger, CollapsibleChevron, CollapsibleContent } from "@/components/ui/collapsible"
+import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible"
 
 export default function FAQ() {
   return (
-    <div className="space-y-4">
-      <Collapsible className="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
-        <CollapsibleTrigger className="flex items-center justify-between px-6 py-4">
-          <h3 className="text-lg font-medium">What is the refund policy?</h3>
-          <div className="h-5 w-5 text-gray-500 transition-transform duration-300 group-[data-state=open]:rotate-180" />
-        </CollapsibleTrigger>
-        <CollapsibleContent className="px-6 pb-4 pt-0">
-          <div className="prose text-gray-600 dark:text-gray-400">
-            <p>
-              We offer a 30-day money-back guarantee on all our products. If you're not satisfied with your purchase,
-              you can return it for a full refund within 30 days of the delivery date.
-            </p>
-            <p>
-              To initiate a return, please contact our customer support team with your order number and a brief
-              explanation of why you\'d like to return the item. We\'ll provide you with a return shipping label and
-              instructions on how to send the item back to us.
-            </p>
-            <p>
-              Once we receive the item, we\'ll process the refund within 5-7 business days. Please note that the refund
-              will be issued to the original payment method used for the purchase.
-            </p>
-          </div>
-        </CollapsibleContent>
-      </Collapsible>
-      <Collapsible className="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
-        <CollapsibleTrigger className="flex items-center justify-between px-6 py-4">
-          <h3 className="text-lg font-medium">How do I track my order?</h3>
-          <div className="h-5 w-5 text-gray-500 transition-transform duration-300 group-[data-state=open]:rotate-180" />
-        </CollapsibleTrigger>
-        <CollapsibleContent className="px-6 pb-4 pt-0">
-          <div className="prose text-gray-600 dark:text-gray-400">
-            <p>
-              You can track the status of your order by logging into your account on our website and navigating to the
-              "Orders" section. There, you\'ll find the current status of your order, as well as the estimated delivery
-              date.
-            </p>
-            <p>
-              If you don\'t have an account or can\'t find your order information, you can also contact our customer
-              support team with your order number, and they\'ll be happy to provide you with the latest update on your
-              shipment.
-            </p>
-            <p>
-              Please note that it may take 1-2 business days for your order status to be updated after it\'s been
-              shipped. If you have any further questions, don\'t hesitate to reach out to us.
-            </p>
-          </div>
-        </CollapsibleContent>
-      </Collapsible>
-      <Collapsible className="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
-        <CollapsibleTrigger className="flex items-center justify-between px-6 py-4">
-          <h3 className="text-lg font-medium">What payment methods do you accept?</h3>
-          <div className="h-5 w-5 text-gray-500 transition-transform duration-300 group-[data-state=open]:rotate-180" />
-        </CollapsibleTrigger>
-        <CollapsibleContent className="px-6 pb-4 pt-0">
-          <div className="prose text-gray-600 dark:text-gray-400">
-            <p>
-              We accept a variety of payment methods, including Visa, Mastercard, American Express, Discover, and
-              PayPal. You can choose your preferred payment method during the checkout process.
-            </p>
-            <p>
-              All transactions are processed securely through our payment gateway, ensuring the safety and
-              confidentiality of your financial information. We take the security of our customers' data very seriously
-              and employ the latest encryption technologies to protect your information.
-            </p>
-            <p>
-              If you have any questions or concerns about our payment processing, please don't hesitate to contact our
-              customer support team. They'll be happy to assist you with any information you need.
-            </p>
-          </div>
-        </CollapsibleContent>
-      </Collapsible>
-      <Collapsible className="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
-        <CollapsibleTrigger className="flex items-center justify-between px-6 py-4">
-          <h3 className="text-lg font-medium">How long does shipping take?</h3>
-          <div className="h-5 w-5 text-gray-500 transition-transform duration-300 group-[data-state=open]:rotate-180" />
-        </CollapsibleTrigger>
-        <CollapsibleContent className="px-6 pb-4 pt-0">
-          <div className="prose text-gray-600 dark:text-gray-400">
-            <p>
-              The shipping time for your order will depend on your location and the shipping method you choose at
-              checkout. We offer several shipping options, including:
-            </p>
-            <ul>
-              <li>Standard Shipping: 5-7 business days (free for orders over $50)</li>
-              <li>Expedited Shipping: 2-3 business days (additional charge applies)</li>
-              <li>Next-Day Shipping: 1 business day (additional charge applies)</li>
-            </ul>
-            <p>
-              Please note that these are estimated delivery times and may vary depending on your location and other
-              factors. If you have any questions or concerns about your order's delivery, feel free to contact our
-              customer support team.
-            </p>
-          </div>
-        </CollapsibleContent>
-      </Collapsible>
-    </div>
+    <section className="w-full py-12 md:py-24 lg:py-32">
+      <div className="container px-4 md:px-6">
+        <div className="space-y-4 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Frequently Asked Questions</h2>
+          <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            Get answers to the most common questions about our product.
+          </p>
+        </div>
+        <div className="mt-12 space-y-4 max-w-2xl mx-auto">
+          <Collapsible className="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
+            <CollapsibleTrigger className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left [&[data-state=open]>svg]:rotate-90">
+              <h3 className="text-lg font-medium max-w-[80%]">What is the pricing structure for your product?</h3>
+              <ChevronRightIcon className="h-5 w-5 transition-all" />
+            </CollapsibleTrigger>
+            <CollapsibleContent className="px-6 pb-4 pt-2 text-gray-500 dark:text-gray-400">
+              <p>
+                Our pricing is based on the number of users and the features you need. We offer a range of plans to fit
+                your budget and requirements. You can check our pricing page for more details.
+              </p>
+            </CollapsibleContent>
+          </Collapsible>
+          <Collapsible className="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
+            <CollapsibleTrigger className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left [&[data-state=open]>svg]:rotate-90">
+              <h3 className="text-lg font-medium max-w-[80%]">How long does it take to set up your product?</h3>
+              <ChevronRightIcon className="h-5 w-5 transition-all" />
+            </CollapsibleTrigger>
+            <CollapsibleContent className="px-6 pb-4 pt-2 text-gray-500 dark:text-gray-400">
+              <p>
+                The setup process is quick and easy. Most customers can get up and running in just a few minutes. We
+                provide detailed documentation and support to guide you through the process.
+              </p>
+            </CollapsibleContent>
+          </Collapsible>
+          <Collapsible className="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
+            <CollapsibleTrigger className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left [&[data-state=open]>svg]:rotate-90">
+              <h3 className="text-lg font-medium max-w-[80%]">What kind of support do you offer?</h3>
+              <ChevronRightIcon className="h-5 w-5 transition-all" />
+            </CollapsibleTrigger>
+            <CollapsibleContent className="px-6 pb-4 pt-2 text-gray-500 dark:text-gray-400">
+              <p>
+                We offer a range of support options, including email, chat, and phone support. Our team of experts is
+                available to help you with any questions or issues you may have. We also have a comprehensive knowledge
+                base and community forums.
+              </p>
+            </CollapsibleContent>
+          </Collapsible>
+          <Collapsible className="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
+            <CollapsibleTrigger className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left [&[data-state=open]>svg]:rotate-90">
+              <h3 className="text-lg font-medium max-w-[80%]">Do you offer any integrations or customizations?</h3>
+              <ChevronRightIcon className="h-5 w-5 transition-all" />
+            </CollapsibleTrigger>
+            <CollapsibleContent className="px-6 pb-4 pt-2 text-gray-500 dark:text-gray-400">
+              <p>
+                Yes, we offer a range of integrations with popular tools and platforms. We also provide custom
+                development services to help you tailor our product to your specific needs.
+              </p>
+            </CollapsibleContent>
+          </Collapsible>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function ChevronRightIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="m9 18 6-6-6-6" />
+    </svg>
   )
 }
