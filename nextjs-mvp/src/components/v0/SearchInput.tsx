@@ -60,7 +60,7 @@ export default function SearchInput() {
       <div className="relative">
         <Input
           type="search"
-          placeholder="Search or type your own..."
+          placeholder="Find it or type your own..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyDown={handleKeyDown}

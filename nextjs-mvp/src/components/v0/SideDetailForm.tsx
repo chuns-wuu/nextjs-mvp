@@ -9,19 +9,23 @@ import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 
 
-export default function SideDetailForm({ showDetails }) {
+export default function SideDetailForm({ selectedItem, item, newAction, handleNewAction}) {
+  const title = newAction ? "New action" : "Action details"
+  console.log(`title ${item.title}`)
+  console.log(`selected ${selectedItem}`)
+
   return (
     <div>
-        {showDetails && (<Card className="w-full">
+        {(selectedItem == item.title || selectedItem == "" && newAction) && (<Card className="w-full">
         <CardHeader>
-          <CardTitle>New action</CardTitle>
+          <CardTitle>{title}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
-          <Input placeholder="Action title" />
+          <Input value={item.title} placeholder="Enter action name"/>
           <Textarea placeholder="Did it work? What's the rationale?" className="min-h-[200px]" />
         </CardContent>
         <CardFooter>
-          <Button className="ml-auto">Save action</Button>
+          <Button className="ml-auto" onClick={handleNewAction}>Save action</Button>
         </CardFooter>
       </Card>)}
     </div>

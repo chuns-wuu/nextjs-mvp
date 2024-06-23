@@ -4,7 +4,7 @@ import { CSS } from "@dnd-kit/utilities";
 // import "./dnd.css"
 import { Button } from "../ui/button";
 
-export const Task = ({ id, title, showDetails, onDetailsClick }) => {
+export const Task = ({ id, title, onDetailsClick }) => {
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id });
 
@@ -24,7 +24,7 @@ export const Task = ({ id, title, showDetails, onDetailsClick }) => {
     >
       <input type="checkbox" className="dnd-checkbox" />
       {title}
-      <Button variant="outline" size="sm" onClick={onDetailsClick}> Details </Button>
+      <Button variant="outline" size="sm" onClick={() => onDetailsClick(title)}> Details </Button>
     </div>
   );
 };
