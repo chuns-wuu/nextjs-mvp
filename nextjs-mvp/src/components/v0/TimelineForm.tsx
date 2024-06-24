@@ -22,9 +22,28 @@ import Link from "next/link";
 import TimelineDetail from "./TimelineDetail";
 
 export default function TimelineForm() {
-  const timelineRef = useRef<{ handleNewAction: () => void}>(null)
+  const timelineRef = useRef<{ handleNewAction: () => void, handleDelete: () => Array<string>}>(null)
 
   const [newAction, setNewAction] = useState(true);
+  const [tasks, setTasks] = useState([
+    { id: 1, title: "Rollback changes" },
+    { id: 2, title: "Communicate with monitoring team" },
+    { id: 3, title: "Scale web tier" },
+    { id: 4, title: "Invalidate cache" },
+  ]);
+
+  const [deletedTasks, setDeletedTasks] = useState<Array<string>>([]);
+  const [filteredTasks, setFilteredTasks] = useState(tasks)
+
+  const addTask = (title) => {
+    setTasks((tasks) => [...tasks, { id: tasks.length + 1, title }]);
+  };
+
+  const deleteTasks = (checkedTasks) => {
+    setDeletedTasks(checkedTasks);
+    setFilteredTasks(filteredTasks.filter((t) => !checkedTasks.includes(t.title)));
+    console.log(filteredTasks);
+  }
 
   const cancelNewAction = () => {
     setNewAction(false);
@@ -65,7 +84,12 @@ export default function TimelineForm() {
               </div>
             </PopoverContent>
           </Popover> */}
-            <Button variant="outline" size="sm" >
+            <Button variant="outline" size="sm" onClick={() => {
+              if(timelineRef.current) {
+                const checkedItems = timelineRef.current.handleDelete();
+                deleteTasks(checkedItems);
+              }
+            }}>
               Delete
             </Button>
             <Button variant="outline" size="sm" onClick={() => {
@@ -79,7 +103,7 @@ export default function TimelineForm() {
           </div>
           <div className="flex items-start my-6 justify-items-start mr-auto border-t border-gray-300 dark:border-gray-600 w-1/2 h-1" />
         </div>  
-        <TimelineDetail newAction={newAction} cancelNewAction={cancelNewAction} ref={timelineRef}/>
+        <TimelineDetail newAction={newAction} cancelNewAction={cancelNewAction} setTasks={setFilteredTasks} tasks={filteredTasks} ref={timelineRef}/>
       </div>
     </div>
   )

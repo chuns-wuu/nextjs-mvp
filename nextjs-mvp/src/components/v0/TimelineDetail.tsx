@@ -46,17 +46,7 @@ function isInteractiveElement(element) {
   return false;
 }
 
-const TimelineDetail = forwardRef(function TimelineDetail({newAction, cancelNewAction}, ref: React.Ref<any>) {
-  const [tasks, setTasks] = useState([
-    { id: 1, title: "Rollback changes" },
-    { id: 2, title: "Communicate with monitoring team" },
-    { id: 3, title: "Scale web tier" },
-    { id: 4, title: "Invalidate cache" },
-  ]);
-
-  const addTask = (title) => {
-    setTasks((tasks) => [...tasks, { id: tasks.length + 1, title }]);
-  };
+const TimelineDetail = forwardRef(function TimelineDetail({newAction, cancelNewAction, tasks, setTasks, deletedTasks}, ref: React.Ref<any>) {
 
   const sensors = useSensors(
     useSensor(MyPointerSensor),
@@ -81,22 +71,32 @@ const TimelineDetail = forwardRef(function TimelineDetail({newAction, cancelNewA
   };
 
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
-
+  const [checkedItems, setCheckedItems] =  useState<Array<string>>([]);
 
   const handleDetailsClick = (item) => {
     setSelectedItem(item);
     cancelNewAction();
   };
 
+  const handleCheckClick = (item, isChecked) => {
+    if (isChecked) {
+      setCheckedItems([...checkedItems, item])
+    } else {
+      setCheckedItems(checkedItems.filter((t) => t !== item))
+    }
+  }
+
 
   useImperativeHandle(ref, () => {
     return {
       handleNewAction() {
         setSelectedItem(null)
+      },
+      handleDelete() {
+        return checkedItems;
       }
-    
     }
-  }, []);
+  }, [checkedItems]);
 
   return (
     <div className="flex flex-row items-start gap-8">
@@ -106,13 +106,13 @@ const TimelineDetail = forwardRef(function TimelineDetail({newAction, cancelNewA
               collisionDetection={closestCorners}
               onDragEnd={handleDragEnd}
             >
-              <Column id="toDo" tasks={tasks} onDetailsClick={handleDetailsClick}/>
+              <Column id="toDo" tasks={tasks} onDetailsClick={handleDetailsClick} onCheckClick={handleCheckClick}/>
             </DndContext>
             
         </div>
         <div className="items-start h-screen w-[600px]">
           {tasks.map((item, index) => (
-            <SideDetailForm selectedItem={selectedItem} item={item} newAction={newAction} handleNewAction={cancelNewAction}/>
+              <SideDetailForm selectedItem={selectedItem} item={item} newAction={newAction} handleNewAction={cancelNewAction}/>
           ))}
           <SideDetailForm selectedItem="" item="" newAction={newAction} handleNewAction={cancelNewAction}/>
         </div>

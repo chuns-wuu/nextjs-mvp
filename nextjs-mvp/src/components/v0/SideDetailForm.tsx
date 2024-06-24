@@ -11,8 +11,6 @@ import { Button } from "@/components/ui/button"
 
 export default function SideDetailForm({ selectedItem, item, newAction, handleNewAction}) {
   const title = newAction ? "New action" : "Action details"
-  console.log(`title ${item.title}`)
-  console.log(`selected ${selectedItem}`)
 
   return (
     <div>
