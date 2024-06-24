@@ -7,16 +7,16 @@ import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectGroup, SelectItem } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
-import MultiSelectBubble from "./MultiSelectBubble"
+import MultiSelectBubble from "./components/MultiSelectBubble"
 import { Progress } from "../ui/progress"
-import SearchInput from "./SearchInput"
+import SearchInput from "./components/SearchInput"
 
 export default function ServiceForm() {
   return (
     <div className="flex flex-col items-center w-full">
       <Progress value={33} />
       <div className="flex flex-row items-center justify-between w-3/4 py-6 ">
-        <p className="mx-auto md:text-xl"> What was the underlying tech stack with the error? </p>
+        <p className="mx-auto md:text-xl"> You took an interesting approach. What was the underlying tech stack? </p>
         <Button type="submit" className="flex items-center gap-2">
             <span>Continue</span>
         </Button>

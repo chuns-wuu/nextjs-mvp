@@ -16,10 +16,10 @@ import { Separator } from "@/components/ui/separator"
 import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover"
 import { Calendar } from "@/components/ui/calendar"
 import { useRef, useState } from "react";
-import SideDetailForm from "./SideDetailForm";
+import SideDetailForm from "./components/SideDetailForm";
 import { Input } from "../ui/input";
 import Link from "next/link";
-import TimelineDetail from "./TimelineDetail";
+import TimelineDetail from "./components/TimelineDetail";
 
 export default function TimelineForm() {
   const timelineRef = useRef<{ handleNewAction: () => void, handleDelete: () => Array<string>}>(null)
@@ -45,17 +45,21 @@ export default function TimelineForm() {
     console.log(filteredTasks);
   }
 
-  const cancelNewAction = (title) => {
+  const saveNewAction = (title) => {
+    cancelNewAction();
+    setFilteredTasks([...filteredTasks, { id: tasks.length + 1, title }]);
+  }
+
+  const cancelNewAction = () => {
     if(newAction)
       setNewAction(false);
-    setFilteredTasks([...filteredTasks, { id: tasks.length + 1, title }]);
   }
 
   return (
     <div className="flex flex-col items-center w-full">
       <Progress value={66} />
       <div className="flex flex-row items-center justify-between w-3/4 py-6 ">
-        <p className="mx-auto md:text-xl"> Got it! I found a few actions potentially related to this incident, can you edit and reorder them? </p>
+        <p className="mx-auto md:text-xl"> Got it! I wrote a few actions potentially related to this incident, can you edit and reorder them? </p>
         <Button type="submit" className="flex items-center gap-2">
             <span>Continue</span>
         </Button>
@@ -105,7 +109,7 @@ export default function TimelineForm() {
           </div>
           <div className="flex items-start my-6 justify-items-start mr-auto border-t border-gray-300 dark:border-gray-600 w-1/2 h-1" />
         </div>  
-        <TimelineDetail newAction={newAction} cancelNewAction={cancelNewAction} setTasks={setFilteredTasks} tasks={filteredTasks} ref={timelineRef}/>
+        <TimelineDetail newAction={newAction} saveNewAction={saveNewAction} cancelNewAction={cancelNewAction} setTasks={setFilteredTasks} tasks={filteredTasks} ref={timelineRef}/>
       </div>
     </div>
   )

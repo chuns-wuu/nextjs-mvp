@@ -16,7 +16,7 @@ export default function TitleForm() {
             It’s okay, Incidents are supposed to happen.
           </p>
           <div className="pt-10 flex flex-row justify-center items-start gap-8 h-screen">
-            <Input id="name" placeholder="Describe the error in a few sentences" className="w-1/2 h-12 bg-gray-200 rounded-md px-4 py-2 focus:bg-white focus:outline-none transition-colors duration-200"/>
+            <Input id="name" placeholder="Describe the incident in a few sentences" className="w-1/2 h-12 bg-gray-200 rounded-md px-4 py-2 focus:bg-white focus:outline-none transition-colors duration-200"/>
             <Link
               href="#"
               className="inline-flex h-12 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"

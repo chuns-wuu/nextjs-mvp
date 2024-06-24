@@ -8,7 +8,7 @@ import {
 } from "@dnd-kit/core";
 import { arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 import SideDetailForm from "./SideDetailForm";
-import { Column } from "../dnd/Column";
+import { Column } from "../../dnd/Column";
 import React, { forwardRef, useImperativeHandle, useState } from 'react';
 
 class MyPointerSensor extends PointerSensor {
@@ -46,7 +46,7 @@ function isInteractiveElement(element) {
   return false;
 }
 
-const TimelineDetail = forwardRef(function TimelineDetail({newAction, cancelNewAction, tasks, setTasks, deletedTasks}, ref: React.Ref<any>) {
+const TimelineDetail = forwardRef(function TimelineDetail({newAction, cancelNewAction, tasks, setTasks, saveNewAction}, ref: React.Ref<any>) {
 
   const sensors = useSensors(
     useSensor(MyPointerSensor),
@@ -112,9 +112,9 @@ const TimelineDetail = forwardRef(function TimelineDetail({newAction, cancelNewA
         </div>
         <div className="items-start h-screen w-[600px]">
           {tasks.map((item, index) => (
-              <SideDetailForm selectedItem={selectedItem} item={item} newAction={newAction} handleNewAction={cancelNewAction}/>
+              <SideDetailForm selectedItem={selectedItem} item={item} newAction={newAction} handleNewAction={saveNewAction}/>
           ))}
-          <SideDetailForm selectedItem="" item="" newAction={newAction} handleNewAction={cancelNewAction}/>
+          <SideDetailForm selectedItem="" item="" newAction={newAction} handleNewAction={saveNewAction}/>
         </div>
     </div>
   )

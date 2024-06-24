@@ -6,7 +6,7 @@
 import { Card } from "@/components/ui/card"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 
-export default function Component() {
+export default function Testimonial() {
   return (
     <Card className="w-full max-w-md p-6 grid gap-6">
       <div className="flex items-center gap-4">
