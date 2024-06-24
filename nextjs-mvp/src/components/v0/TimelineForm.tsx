@@ -45,8 +45,10 @@ export default function TimelineForm() {
     console.log(filteredTasks);
   }
 
-  const cancelNewAction = () => {
-    setNewAction(false);
+  const cancelNewAction = (title) => {
+    if(newAction)
+      setNewAction(false);
+    setFilteredTasks([...filteredTasks, { id: tasks.length + 1, title }]);
   }
 
   return (
