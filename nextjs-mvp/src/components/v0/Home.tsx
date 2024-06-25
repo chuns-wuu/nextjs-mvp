@@ -21,7 +21,7 @@ export default function HomePage() {
             Write less. Code more.
           </h1>
           <p className="p-3 mx-auto text-gray-500 md:text-xl dark:text-gray-400">
-          Do incident retrospectives the smart way.
+            Do your incident response the smart(lazy) way.
           </p>
           <div className="flex flex-col gap-8 sm:flex-row sm:justify-center">
             <Link
@@ -53,28 +53,42 @@ export default function HomePage() {
             What developers are saying
         </h1>
         <p className="mx-auto text-gray-500 md:text-xl dark:text-gray-400">
-          Try our free browser tool and save time today
+          Try our browser retrospective tool and save time today
         </p>
         <Testimonial />
+      </div>
+      <div className="space-y-6 items-center justify-center flex flex-col">
+        <h1 className="text-3xl lg:pt-56 pt-10 font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Incident retrospectives, simplified.
+        </h1>
+        <p className="mx-auto text-gray-500 md:text-xl dark:text-gray-400">
+            Don't start from scratch. Use our retrospective boilerplates instead.
+        </p>
+        <p className="mx-auto text-gray-500 md:text-xl dark:text-gray-400">
+            Joe makes coffee with the time he saved, what will you do?
+        </p>
+        <DemoAnimation />
       </div>
       <div className="space-y-6 items-center justify-center flex flex-col">
         <h1 className="text-3xl lg:pt-56 pt-10 font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Auto-update incident runbooks
         </h1>
         <p className="mx-auto text-gray-500 md:text-xl dark:text-gray-400">
-            Make runbooks up-to-date for the next critical incidents
+            We make sure runbooks are up-to-date for your critical incidents.
+        </p>
+        <p className="mx-auto text-gray-500 md:text-xl dark:text-gray-400">
+            *Early birds feature*
         </p>
         <Link
           href="#"
           className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
           prefetch={false}
         >
-          Sign up feature waitlist
+          Join the waitlist
         </Link>
         <DemoAnimation />
       </div>
-      
-      
+
       {/* <FAQ /> */}
     </section>
   )
