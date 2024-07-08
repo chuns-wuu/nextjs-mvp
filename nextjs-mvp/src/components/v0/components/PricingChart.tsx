@@ -21,21 +21,29 @@ export default function PricingChart() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           <div className="bg-background rounded-lg shadow-lg p-6 md:p-8 flex flex-col gap-4">
             <div>
-              <h3 className="text-2xl font-bold">Basic</h3>
-              <p className="text-muted-foreground">Perfect for individuals.</p>
+              <h3 className="text-2xl font-bold">Starter</h3>
+              <p className="text-muted-foreground">Perfect for small teams.</p>
             </div>
             <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-bold">$3</span>
-              <span className="text-muted-foreground">/month</span>
+              <span className="text-4xl font-bold">$2</span>
+              <span className="text-muted-foreground">/host(monthly)</span>
             </div>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <CheckIcon className="w-5 h-5 fill-primary" />
-                <span>Unlimited retrospectives</span>
+                <span>Next-gen incident response logging</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckIcon className="w-5 h-5 fill-primary" />
-                <span>Basic online support</span>
+                <span>Unlimited retrospective boilerplates</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckIcon className="w-5 h-5 fill-primary" />
+                <span>Team workspace</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckIcon className="w-5 h-5 fill-primary" />
+                <span>Customer support</span>
               </li>
             </ul>
             <Button size="lg">Try in browser</Button>
@@ -43,53 +51,45 @@ export default function PricingChart() {
           <div className="bg-background rounded-lg shadow-lg p-6 md:p-8 flex flex-col gap-4">
             <div>
               <h3 className="text-2xl font-bold">Pro</h3>
-              <p className="text-muted-foreground">Ideal for teams.</p>
+              <p className="text-muted-foreground">Ideal for on-call teams.</p>
             </div>
             <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-bold">$7</span>
-              <span className="text-muted-foreground">/month</span>
+              <span className="text-4xl font-bold">$8</span>
+              <span className="text-muted-foreground">/host(monthly)</span>
             </div>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <CheckIcon className="w-5 h-5 fill-primary" />
-                <span>Per user based</span>
+                <span>Get everything in starter, plus:</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckIcon className="w-5 h-5 fill-primary" />
-                <span>Unlimited retrospectives</span>
+                <span>Out-of-box dashboards</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckIcon className="w-5 h-5 fill-primary" />
-                <span>Collaboration space</span>
+                <span>Auto-managed runbooks</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckIcon className="w-5 h-5 fill-primary" />
-                <span>Auto-updated Runbooks</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckIcon className="w-5 h-5 fill-primary" />
-                <span>Priority support</span>
+                <span>Priority customer support</span>
               </li>
             </ul>
             <Button size="lg">Get Started</Button>
           </div>
           <div className="bg-background rounded-lg shadow-lg p-6 md:p-8 flex flex-col gap-4">
             <div>
-              <h3 className="text-2xl font-bold">Custom</h3>
+              <h3 className="text-2xl font-bold">Enterprise</h3>
               <p className="text-muted-foreground">Talk to us</p>
             </div>
             <div className="flex items-baseline gap-2">
               <span className="text-4xl font-bold">$?</span>
-              <span className="text-muted-foreground">/month</span>
+              <span className="text-muted-foreground">/host</span>
             </div>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <CheckIcon className="w-5 h-5 fill-primary" />
-                <span>Unlimited users</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckIcon className="w-5 h-5 fill-primary" />
-                <span>Unlimited storage</span>
+                <span>Customized plan for your need</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckIcon className="w-5 h-5 fill-primary" />

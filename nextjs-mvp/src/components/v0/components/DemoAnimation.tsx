@@ -46,6 +46,19 @@ const images = Array.of(
   {
     image: 
     <Image
+      src="/assets/bot.png"
+      alt=""
+      width={600}
+      height={200}
+      priority
+      className="object-contain"
+    />,
+    width: 600,
+    height: 200
+  },
+  {
+    image: 
+    <Image
       src="/assets/search.png"
       alt=""
       width={600}

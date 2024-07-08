@@ -21,11 +21,11 @@ export default function HomePage() {
             Write less. Code more.
           </h1>
           <p className="p-3 mx-auto text-gray-500 md:text-xl dark:text-gray-400">
-            Do your incident response the smart(lazy) way.
+            Do your incident response the smart and lazy way ¯\_(ツ)_/¯.
           </p>
           <div className="flex flex-col gap-8 sm:flex-row sm:justify-center">
             <Link
-              href="#"
+              href="/new/0"
               className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
               prefetch={false}
             >
@@ -63,9 +63,6 @@ export default function HomePage() {
         </h1>
         <p className="mx-auto text-gray-500 md:text-xl dark:text-gray-400">
             Don't start from scratch. Use our retrospective boilerplates instead.
-        </p>
-        <p className="mx-auto text-gray-500 md:text-xl dark:text-gray-400">
-            Joe makes coffee with the time he saved, what will you do?
         </p>
         <DemoAnimation />
       </div>

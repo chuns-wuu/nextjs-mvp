@@ -22,7 +22,7 @@ export default function QuestionCard() {
   }
 
   const questionCards = [
-      <Card className="w-full max-w-md">
+      <Card className="w-screen max-w-md">
         <CardHeader className="flex flex-row justify-between">
           <Button variant="outline">Prev</Button>
           <CardTitle>Question 1/6</CardTitle>
@@ -33,7 +33,7 @@ export default function QuestionCard() {
           <SearchInput />
         </CardContent>
       </Card>,
-      <Card className="w-full max-w-md">
+      <Card className="w-screen max-w-md">
         <CardHeader className="flex flex-row justify-between">
           <Button variant="outline" onClick={() => onPrevClick(1)}>Prev</Button>
           <CardTitle>Question 2/6</CardTitle>
@@ -46,7 +46,7 @@ export default function QuestionCard() {
           </div>
         </CardContent>
       </Card>,
-      <Card className="w-full max-w-md">
+      <Card className="w-screen max-w-md">
         <CardHeader className="flex flex-row justify-between">
           <Button variant="outline" onClick={() => onPrevClick(2)}>Prev</Button>
           <CardTitle>Question 3/6</CardTitle>
@@ -60,7 +60,7 @@ export default function QuestionCard() {
           </div>
         </CardContent>
       </Card>,
-      <Card className="w-full max-w-md">
+      <Card className="w-screen max-w-md">
         <CardHeader className="flex flex-row justify-between">
           <Button variant="outline" onClick={() => onPrevClick(3)}>Prev</Button>
           <CardTitle>Question 3/6</CardTitle>
@@ -74,7 +74,7 @@ export default function QuestionCard() {
           </div>
         </CardContent>
       </Card>,
-      <Card className="w-full max-w-md">
+      <Card className="w-screen max-w-md">
         <CardHeader className="flex flex-row justify-between">
           <Button variant="outline" onClick={() => onPrevClick(4)}>Prev</Button>
           <CardTitle>Question 4/6</CardTitle>
@@ -87,7 +87,7 @@ export default function QuestionCard() {
           </div>
         </CardContent>
       </Card>,
-      <Card className="w-full max-w-md">
+      <Card className="w-screen max-w-md">
         <CardHeader className="flex flex-row justify-between">
           <Button variant="outline" onClick={() => onPrevClick(5)}>Prev</Button>
           <CardTitle>Question 5/6</CardTitle>
@@ -100,7 +100,7 @@ export default function QuestionCard() {
           </div>
         </CardContent>
       </Card>,
-      <Card className="w-full max-w-md">
+      <Card className="w-screen max-w-md">
         <CardHeader className="flex flex-row justify-between">
           <Button variant="outline" onClick={() => onPrevClick(6)}>Prev</Button>
           <CardTitle>Question 6/6</CardTitle>
