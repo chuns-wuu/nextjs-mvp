@@ -108,7 +108,7 @@ export default function PricingChart() {
   )
 }
 
-function CheckIcon(props) {
+function CheckIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

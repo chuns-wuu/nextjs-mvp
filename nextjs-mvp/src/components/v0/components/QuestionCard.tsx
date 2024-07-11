@@ -22,7 +22,7 @@ export default function QuestionCard() {
   }
 
   const questionCards = [
-      <Card className="w-screen max-w-md">
+      <Card key="first" className="w-screen max-w-md">
         <CardHeader className="flex flex-row justify-between">
           <Button variant="outline">Prev</Button>
           <CardTitle>Question 1/6</CardTitle>
@@ -33,7 +33,7 @@ export default function QuestionCard() {
           <SearchInput />
         </CardContent>
       </Card>,
-      <Card className="w-screen max-w-md">
+      <Card key="second" className="w-screen max-w-md">
         <CardHeader className="flex flex-row justify-between">
           <Button variant="outline" onClick={() => onPrevClick(1)}>Prev</Button>
           <CardTitle>Question 2/6</CardTitle>
@@ -42,11 +42,11 @@ export default function QuestionCard() {
         <CardContent className="space-y-4 ">
           <p className="text-lg font-medium">What was the impact?</p>
           <div className="flex flex-row justify-between items-center gap-6">
-            <Input placeholder="Who"/> couldn't <Input placeholder="What"/> for <Input placeholder="How long"/>
+            <Input placeholder="Who"/> couldn&#39;t <Input placeholder="What"/> for <Input placeholder="How long"/>
           </div>
         </CardContent>
       </Card>,
-      <Card className="w-screen max-w-md">
+      <Card key="third" className="w-screen max-w-md">
         <CardHeader className="flex flex-row justify-between">
           <Button variant="outline" onClick={() => onPrevClick(2)}>Prev</Button>
           <CardTitle>Question 3/6</CardTitle>
@@ -60,7 +60,7 @@ export default function QuestionCard() {
           </div>
         </CardContent>
       </Card>,
-      <Card className="w-screen max-w-md">
+      <Card key="fourth" className="w-screen max-w-md">
         <CardHeader className="flex flex-row justify-between">
           <Button variant="outline" onClick={() => onPrevClick(3)}>Prev</Button>
           <CardTitle>Question 3/6</CardTitle>
@@ -74,7 +74,7 @@ export default function QuestionCard() {
           </div>
         </CardContent>
       </Card>,
-      <Card className="w-screen max-w-md">
+      <Card key="fifth" className="w-screen max-w-md">
         <CardHeader className="flex flex-row justify-between">
           <Button variant="outline" onClick={() => onPrevClick(4)}>Prev</Button>
           <CardTitle>Question 4/6</CardTitle>
@@ -87,7 +87,7 @@ export default function QuestionCard() {
           </div>
         </CardContent>
       </Card>,
-      <Card className="w-screen max-w-md">
+      <Card key="sixth" className="w-screen max-w-md">
         <CardHeader className="flex flex-row justify-between">
           <Button variant="outline" onClick={() => onPrevClick(5)}>Prev</Button>
           <CardTitle>Question 5/6</CardTitle>
@@ -100,7 +100,7 @@ export default function QuestionCard() {
           </div>
         </CardContent>
       </Card>,
-      <Card className="w-screen max-w-md">
+      <Card key="seventh" className="w-screen max-w-md">
         <CardHeader className="flex flex-row justify-between">
           <Button variant="outline" onClick={() => onPrevClick(6)}>Prev</Button>
           <CardTitle>Question 6/6</CardTitle>

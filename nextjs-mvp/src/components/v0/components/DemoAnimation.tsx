@@ -60,7 +60,8 @@ const images = Array.of(
       className="object-contain"
     />,
     width: 600,
-    height: 200
+    height: 200,
+    key: "bot.png"
   },
   {
     image: 
@@ -73,7 +74,8 @@ const images = Array.of(
       className="object-contain"
     />,
     width: 600,
-    height: 200
+    height: 200,
+    key: "search.png"
   },
   {
     image:  
@@ -86,13 +88,14 @@ const images = Array.of(
       className="object-contain"
     />,
     width: 600,
-    height: 860
+    height: 860,
+    key: "sample-doc.png"
   }
 );
 
 const DemoAnimation = () => {
   return images.map(item => (
-    <Card image={item.image} width={item.width} height={item.height}/>
+    <Card key={item.key} image={item.image} width={item.width} height={item.height}/>
   ));
 };
 

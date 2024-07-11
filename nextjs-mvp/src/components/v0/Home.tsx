@@ -62,7 +62,7 @@ export default function HomePage() {
             Incident retrospectives, simplified.
         </h1>
         <p className="mx-auto text-gray-500 md:text-xl dark:text-gray-400">
-            Don't start from scratch. Use our retrospective boilerplates instead.
+            Don&#39;t start from scratch. Use our retrospective boilerplates instead.
         </p>
         <DemoAnimation />
       </div>
