@@ -106,13 +106,13 @@ const TimelineDetail = forwardRef(function TimelineDetail({newAction, cancelNewA
               collisionDetection={closestCorners}
               onDragEnd={handleDragEnd}
             >
-              <Column id="toDo" tasks={tasks} onDetailsClick={handleDetailsClick} onCheckClick={handleCheckClick}/>
+              <Column tasks={tasks} onDetailsClick={handleDetailsClick} onCheckClick={handleCheckClick}/>
             </DndContext>
             
         </div>
         <div className="items-start h-screen w-[600px]">
           {tasks.map((item, index) => (
-              <SideDetailForm selectedItem={selectedItem} item={item} newAction={newAction} handleNewAction={saveNewAction}/>
+              <SideDetailForm selectedItem={selectedItem} item={item} newAction={newAction} handleNewAction={saveNewAction} key={item}/>
           ))}
           <SideDetailForm selectedItem="" item="" newAction={newAction} handleNewAction={saveNewAction}/>
         </div>

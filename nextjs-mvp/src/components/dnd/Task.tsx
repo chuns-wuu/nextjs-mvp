@@ -4,7 +4,14 @@ import { CSS } from "@dnd-kit/utilities";
 // import "./dnd.css"
 import { Button } from "../ui/button";
 
-export const Task = ({ id, title, onDetailsClick, onCheckClick}) => {
+interface TaskProps {
+  id: string;
+  title: string;
+  onDetailsClick: (taskId: string) => void;
+  onCheckClick: (taskId: string, checked: boolean) => void;
+}
+
+export const Task: React.FC<TaskProps> = ({ id, title, onDetailsClick, onCheckClick}) => {
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id });
 

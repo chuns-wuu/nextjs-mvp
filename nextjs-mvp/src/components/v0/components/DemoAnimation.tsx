@@ -1,7 +1,7 @@
 'use client';
 //import "./styles.css";
 import { m, motion, Variants } from "framer-motion";
-import Image from "next/image";
+import Image, { ImageProps } from "next/image";
 
 interface Props {
   emoji: string;
@@ -26,7 +26,13 @@ const cardVariants: Variants = {
 
 const hue = (h: number) => `hsl(${h}, 100%, 50%)`;
 
-function Card({ image, width, height }) {
+interface CardProps {
+  image: React.ReactNode;
+  width: number;
+  height: number;
+}
+
+function Card({ image, width, height }: CardProps) {
   const className = `card w-[${width}] h-[${height}]`
   return (
     <motion.div

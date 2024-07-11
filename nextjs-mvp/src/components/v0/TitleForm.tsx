@@ -24,7 +24,7 @@ export default function TitleForm() {
             Blameless retrospective
           </h1>
           <p className="mx-auto text-gray-500 md:text-xl dark:text-gray-400">
-          Joe makes coffee with the time he saved, what would you do?
+          Don't start from scratch. Use our retrospective boilerplates instead.
           </p>
           <div className="pt-6 flex flex-row justify-center items-start gap-8 h-screen">
             <Input id="name" 
