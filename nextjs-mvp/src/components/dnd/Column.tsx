@@ -3,20 +3,15 @@ import {
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 
-import { Task } from "./Task";
+import { Task as TaskComponent} from "./Task";
+import { Task } from "@/components/v0/TimelineForm"
 
 import "./dnd.css"
 
-// Define the type for a single task
-interface Tasks {
-  id: string;
-  title: string;
-  // Add other task properties here
-}
 
 // Define the props interface
 interface ColumnProps {
-  tasks: Tasks[];
+  tasks: Task[];
   onDetailsClick: (taskId: string) => void;
   onCheckClick: (taskId: string, checked: boolean) => void;
 }
@@ -27,7 +22,7 @@ export const Column: React.FC<ColumnProps> = ({ tasks, onDetailsClick, onCheckCl
     <div className="dnd-column">
       <SortableContext items={tasks} strategy={verticalListSortingStrategy}>
         {tasks.map((task) => (
-          <Task key={task.id} id={task.id} title={task.title} onDetailsClick={onDetailsClick} onCheckClick={onCheckClick} />
+          <TaskComponent key={task.id} id={task.id} title={task.title} onDetailsClick={onDetailsClick} onCheckClick={onCheckClick} />
         ))}
       </SortableContext>
     </div>

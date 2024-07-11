@@ -11,12 +11,12 @@ import { Input } from "@/components/ui/input"
 import { ReactElement, useState } from "react"
 
 export default function QuestionCard() {
-  const onNextClick = (id) => {
+  const onNextClick = (id: number) => {
     if(id < questionCards.length-1)
       setVisibleQuestion(questionCards[id+1])
   }
 
-  const onPrevClick = (id) => {
+  const onPrevClick = (id: number) => {
     if(id > 0)
       setVisibleQuestion(questionCards[id-1])
   }

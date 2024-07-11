@@ -21,33 +21,39 @@ import { Input } from "../ui/input";
 import Link from "next/link";
 import TimelineDetail from "./components/TimelineDetail";
 
+
+export interface Task {
+  id: string,
+  title: string
+}
+
 export default function TimelineForm() {
   const timelineRef = useRef<{ handleNewAction: () => void, handleDelete: () => Array<string>}>(null)
 
   const [newAction, setNewAction] = useState(true);
-  const [tasks, setTasks] = useState([
-    { id: 1, title: "Rollback changes" },
-    { id: 2, title: "Communicate with monitoring team" },
-    { id: 3, title: "Scale web tier" },
-    { id: 4, title: "Invalidate cache" },
+  const [tasks, setTasks] = useState<Task[]>([
+    { id: "1", title: "Rollback changes" },
+    { id: "2", title: "Communicate with monitoring team" },
+    { id: "3", title: "Scale web tier" },
+    { id: "4", title: "Invalidate cache" },
   ]);
 
-  const [deletedTasks, setDeletedTasks] = useState<Array<string>>([]);
+  const [deletedTasks, setDeletedTasks] = useState<string[]>([]);
   const [filteredTasks, setFilteredTasks] = useState(tasks)
 
-  const addTask = (title) => {
-    setTasks((tasks) => [...tasks, { id: tasks.length + 1, title }]);
+  const addTask = (title: string) => {
+    setTasks((tasks) => [...tasks, { id: (tasks.length + 1).toString(), title }]);
   };
 
-  const deleteTasks = (checkedTasks) => {
+  const deleteTasks = (checkedTasks: string[]) => {
     setDeletedTasks(checkedTasks);
     setFilteredTasks(filteredTasks.filter((t) => !checkedTasks.includes(t.title)));
     console.log(filteredTasks);
   }
 
-  const saveNewAction = (title) => {
+  const saveNewAction = (title: string) => {
     cancelNewAction();
-    setFilteredTasks([...filteredTasks, { id: tasks.length + 1, title }]);
+    setFilteredTasks([...filteredTasks, { id: (tasks.length + 1).toString(), title }]);
   }
 
   const cancelNewAction = () => {
@@ -126,7 +132,7 @@ export default function TimelineForm() {
   )
 }
 
-function CalendarDaysIcon(props) {
+function CalendarDaysIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

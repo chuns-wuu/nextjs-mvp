@@ -5,21 +5,25 @@ import {
   useSensor,
   useSensors,
   closestCorners,
+  DragEndEvent,
+  PointerSensorOptions,
 } from "@dnd-kit/core";
+import type { PointerEvent } from 'react';
 import { arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 import SideDetailForm from "./SideDetailForm";
 import { Column } from "../../dnd/Column";
 import React, { forwardRef, useImperativeHandle, useState } from 'react';
+import { Task } from "@/components/v0/TimelineForm"
 
 class MyPointerSensor extends PointerSensor {
   static activators = [
     {
-      eventName: 'onPointerDown',
-      handler: ({nativeEvent: event}) => {
+      eventName: "onPointerDown" as const,
+      handler: ({nativeEvent: event}: PointerEvent<Element>,  {onActivation }: PointerSensorOptions): boolean => {
         if (
           !event.isPrimary ||
           event.button !== 0 ||
-          isInteractiveElement(event.target)
+          isInteractiveElement(event.target as HTMLElement)
         ) {
           return false;
         }
@@ -30,7 +34,7 @@ class MyPointerSensor extends PointerSensor {
   ];
 }
 
-function isInteractiveElement(element) {
+function isInteractiveElement(element: HTMLElement | null): boolean {
   const interactiveElements = [
     'button',
     'input',
@@ -39,14 +43,22 @@ function isInteractiveElement(element) {
     'option',
   ];
 
-  if (interactiveElements.includes(element.tagName.toLowerCase())) {
+  if (interactiveElements.includes(element!!.tagName.toLowerCase())) {
     return true;
   }
 
   return false;
 }
 
-const TimelineDetail = forwardRef(function TimelineDetail({newAction, cancelNewAction, tasks, setTasks, saveNewAction}, ref: React.Ref<any>) {
+interface TimelineDetailProp {
+  newAction: boolean,
+  cancelNewAction: () => void,
+  tasks: Task[],
+  setTasks: React.Dispatch<React.SetStateAction<Task[]>>,
+  saveNewAction: (title: string) => void
+}
+
+const TimelineDetail = forwardRef(function TimelineDetail({newAction, cancelNewAction, tasks, setTasks, saveNewAction}: TimelineDetailProp, ref: React.Ref<any>) {
 
   const sensors = useSensors(
     useSensor(MyPointerSensor),
@@ -55,16 +67,16 @@ const TimelineDetail = forwardRef(function TimelineDetail({newAction, cancelNewA
     })
   );
 
-  const getTaskPos = (id) => tasks.findIndex((task) => task.id === id);
+  const getTaskPos = (id: string) => tasks.findIndex((task) => task.id === id);
 
-  const handleDragEnd = (event) => {
+  const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
 
-    if (active.id === over.id) return;
+    if (active.id === over?.id) return;
 
     setTasks((tasks) => {
-      const originalPos = getTaskPos(active.id);
-      const newPos = getTaskPos(over.id);
+      const originalPos = getTaskPos(active.id.toString());
+      const newPos = getTaskPos(over!!.id.toString());
 
       return arrayMove(tasks, originalPos, newPos);
     });
@@ -73,12 +85,12 @@ const TimelineDetail = forwardRef(function TimelineDetail({newAction, cancelNewA
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
   const [checkedItems, setCheckedItems] =  useState<Array<string>>([]);
 
-  const handleDetailsClick = (item) => {
+  const handleDetailsClick = (item: string) => {
     setSelectedItem(item);
     cancelNewAction();
   };
 
-  const handleCheckClick = (item, isChecked) => {
+  const handleCheckClick = (item: string, isChecked: boolean) => {
     if (isChecked) {
       setCheckedItems([...checkedItems, item])
     } else {
@@ -112,9 +124,9 @@ const TimelineDetail = forwardRef(function TimelineDetail({newAction, cancelNewA
         </div>
         <div className="items-start h-screen w-[600px]">
           {tasks.map((item, index) => (
-              <SideDetailForm selectedItem={selectedItem} item={item} newAction={newAction} handleNewAction={saveNewAction} key={item}/>
+              <SideDetailForm selectedItem={selectedItem} item={item} newAction={newAction} handleNewAction={saveNewAction} key={item.id}/>
           ))}
-          <SideDetailForm selectedItem="" item="" newAction={newAction} handleNewAction={saveNewAction}/>
+          <SideDetailForm selectedItem="" item={null} newAction={newAction} handleNewAction={saveNewAction}/>
         </div>
     </div>
   )

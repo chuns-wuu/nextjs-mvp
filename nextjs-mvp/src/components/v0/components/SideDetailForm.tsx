@@ -8,9 +8,17 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { useState } from "react";
+import { Task } from '@/components/v0/TimelineForm'
 
 
-export default function SideDetailForm({ selectedItem, item, newAction, handleNewAction}) {
+interface SideDetailProps {
+  selectedItem: string | null,
+  item: Task | null,
+  newAction: boolean,
+  handleNewAction: (newTitle: string) => void
+}
+
+export default function SideDetailForm({ selectedItem, item, newAction, handleNewAction}: SideDetailProps) {
   const [newTitle, setNewTitle] = useState("")
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,12 +29,12 @@ export default function SideDetailForm({ selectedItem, item, newAction, handleNe
 
   return (
     <div>
-        {(selectedItem == item.title || selectedItem == "" && newAction) && (<Card className="w-full">
+        {(selectedItem == item?.title || selectedItem == "" && newAction) && (<Card className="w-full">
         <CardHeader>
           <CardTitle>{title}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
-          <Input value={item.title} placeholder="Enter action name" onChange={handleInputChange}/>
+          <Input value={item?.title} placeholder="Enter action name" onChange={handleInputChange}/>
           <Textarea placeholder="Did it work? What's the rationale?" className="min-h-[200px]" />
         </CardContent>
         <CardFooter>

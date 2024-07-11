@@ -10,14 +10,14 @@ import { Input } from "@/components/ui/input"
 
 export default function SearchInput() {
   const [searchTerm, setSearchTerm] = useState("")
-  const [suggestions, setSuggestions] = useState([
+  const [suggestions, setSuggestions] = useState<string[]>([
     "MySQL",
     "Postgres",
     "MongoDB"
   ])
-  const [selectedOptions, setSelectedOptions] = useState([])
+  const [selectedOptions, setSelectedOptions] = useState<string[]>([])
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && searchTerm.trim() !== "") {
       setSuggestions([...suggestions, searchTerm.trim()])
       setSelectedOptions([...selectedOptions, searchTerm.trim()])
@@ -31,7 +31,7 @@ export default function SearchInput() {
     return matchedSuggestions
   }, [searchTerm, suggestions])
 
-  const handleOptionSelect = (option) => {
+  const handleOptionSelect = (option: string) => {
     if (selectedOptions.includes(option)) {
       setSelectedOptions(selectedOptions.filter((o) => o !== option))
     } else {
@@ -86,7 +86,7 @@ export default function SearchInput() {
   )
 }
 
-function SearchIcon(props) {
+function SearchIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -106,7 +106,7 @@ function SearchIcon(props) {
   )
 }
 
-function XIcon(props) {
+function XIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
