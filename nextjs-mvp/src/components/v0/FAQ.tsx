@@ -7,69 +7,60 @@ import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/component
 
 export default function FAQ() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32">
-      <div className="container px-4 md:px-6">
-        <div className="space-y-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Frequently Asked Questions</h2>
-          <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            Get answers to the most common questions about our product.
-          </p>
-        </div>
-        <div className="mt-12 space-y-4 max-w-2xl mx-auto">
-          <Collapsible className="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
-            <CollapsibleTrigger className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left [&[data-state=open]>svg]:rotate-90">
-              <h3 className="text-lg font-medium max-w-[80%]">What is the pricing structure for your product?</h3>
-              <ChevronRightIcon className="h-5 w-5 transition-all" />
-            </CollapsibleTrigger>
-            <CollapsibleContent className="px-6 pb-4 pt-2 text-gray-500 dark:text-gray-400">
-              <p>
-                Our pricing is based on the number of users and the features you need. We offer a range of plans to fit
-                your budget and requirements. You can check our pricing page for more details.
-              </p>
-            </CollapsibleContent>
-          </Collapsible>
-          <Collapsible className="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
-            <CollapsibleTrigger className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left [&[data-state=open]>svg]:rotate-90">
-              <h3 className="text-lg font-medium max-w-[80%]">How long does it take to set up your product?</h3>
-              <ChevronRightIcon className="h-5 w-5 transition-all" />
-            </CollapsibleTrigger>
-            <CollapsibleContent className="px-6 pb-4 pt-2 text-gray-500 dark:text-gray-400">
-              <p>
-                The setup process is quick and easy. Most customers can get up and running in just a few minutes. We
-                provide detailed documentation and support to guide you through the process.
-              </p>
-            </CollapsibleContent>
-          </Collapsible>
-          <Collapsible className="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
-            <CollapsibleTrigger className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left [&[data-state=open]>svg]:rotate-90">
-              <h3 className="text-lg font-medium max-w-[80%]">What kind of support do you offer?</h3>
-              <ChevronRightIcon className="h-5 w-5 transition-all" />
-            </CollapsibleTrigger>
-            <CollapsibleContent className="px-6 pb-4 pt-2 text-gray-500 dark:text-gray-400">
-              <p>
-                We offer a range of support options, including email, chat, and phone support. Our team of experts is
-                available to help you with any questions or issues you may have. We also have a comprehensive knowledge
-                base and community forums.
-              </p>
-            </CollapsibleContent>
-          </Collapsible>
-          <Collapsible className="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
-            <CollapsibleTrigger className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left [&[data-state=open]>svg]:rotate-90">
-              <h3 className="text-lg font-medium max-w-[80%]">Do you offer any integrations or customizations?</h3>
-              <ChevronRightIcon className="h-5 w-5 transition-all" />
-            </CollapsibleTrigger>
-            <CollapsibleContent className="px-6 pb-4 pt-2 text-gray-500 dark:text-gray-400">
-              <p>
-                Yes, we offer a range of integrations with popular tools and platforms. We also provide custom
-                development services to help you tailor our product to your specific needs.
-              </p>
-            </CollapsibleContent>
-          </Collapsible>
-        </div>
-      </div>
-    </section>
-  )
-}
+    <div className="space-y-4">
+      <Collapsible className="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
+        <CollapsibleTrigger className="flex items-center justify-between px-6 py-4">
+          <h3 className="text-lg font-medium">What is the refund policy?</h3>
+          <div className="h-5 w-5 text-gray-500 transition-transform duration-300 group-[data-state=open]:rotate-180" />
+        </CollapsibleTrigger>
+        <CollapsibleContent className="px-6 pb-4 pt-0">
+          <div className="prose text-gray-600 dark:text-gray-400">
+            <p>
+              xyz
+            </p>
+          </div>
+        </CollapsibleContent>
+      </Collapsible>
+      <Collapsible className="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
+        <CollapsibleTrigger className="flex items-center justify-between px-6 py-4">
+          <h3 className="text-lg font-medium">How do I track my order?</h3>
+          <div className="h-5 w-5 text-gray-500 transition-transform duration-300 group-[data-state=open]:rotate-180" />
+        </CollapsibleTrigger>
+        <CollapsibleContent className="px-6 pb-4 pt-0">
+          <div className="prose text-gray-600 dark:text-gray-400">
+            <p>
+              xyz
+            </p>
+          </div>
+        </CollapsibleContent>
+      </Collapsible>
+      <Collapsible className="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
+        <CollapsibleTrigger className="flex items-center justify-between px-6 py-4">
+          <h3 className="text-lg font-medium">What payment methods do you accept?</h3>
+          <div className="h-5 w-5 text-gray-500 transition-transform duration-300 group-[data-state=open]:rotate-180" />
+        </CollapsibleTrigger>
+        <CollapsibleContent className="px-6 pb-4 pt-0">
+          <div className="prose text-gray-600 dark:text-gray-400">
+            <p>
+              xyz
+            </p>
+          </div>
+        </CollapsibleContent>
+      </Collapsible>
+      <Collapsible className="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
+        <CollapsibleTrigger className="flex items-center justify-between px-6 py-4">
+          <h3 className="text-lg font-medium">How long does shipping take?</h3>
+          <div className="h-5 w-5 text-gray-500 transition-transform duration-300 group-[data-state=open]:rotate-180" />
+        </CollapsibleTrigger>
+        <CollapsibleContent className="px-6 pb-4 pt-0">
+          <div className="prose text-gray-600 dark:text-gray-400">
+            <p>
+              xyz
+            </p>
+          </div>
+        </CollapsibleContent>
+      </Collapsible>
+    </div>
 
 function ChevronRightIcon(props: any) {
   return (

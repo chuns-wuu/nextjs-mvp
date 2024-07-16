@@ -4,13 +4,18 @@
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
 import Link from "next/link"
+import Image from "next/image";
 
 export default function NavBar() {
   return (
     <header className="flex items-center justify-between px-4 py-3 md:px-6 md:py-4">
-      <Link href="#" className="flex items-center gap-2" prefetch={false}>
-        <MountainIcon className="h-6 w-6" />
-        <span className="text-lg font-semibold">echo X</span>
+      <Link href="/" className="flex items-center gap-2" prefetch={false}>
+        <Image
+          src="/assets/logo-full.png"
+          alt=""
+          width={200}
+          height={80}
+        />
       </Link>
       <nav className="flex items-center space-x-12">
         <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
@@ -36,7 +41,7 @@ export default function NavBar() {
   )
 }
 
-function MountainIcon(props) {
+function MountainIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

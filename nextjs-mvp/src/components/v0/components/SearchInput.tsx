@@ -8,16 +8,16 @@
 import { useState, useMemo } from "react"
 import { Input } from "@/components/ui/input"
 
-export default function SearchInput() {
-  const [searchTerm, setSearchTerm] = useState("")
-  const [suggestions, setSuggestions] = useState([
-    "MySQL",
-    "Postgres",
-    "MongoDB"
-  ])
-  const [selectedOptions, setSelectedOptions] = useState([])
+interface SearchInputList{
+  suggestionList: string[]
+}
 
-  const handleKeyDown = (e) => {
+export default function SearchInput({suggestionList}: SearchInputList) {
+  const [searchTerm, setSearchTerm] = useState("")
+  const [suggestions, setSuggestions] = useState<string[]>(suggestionList)
+  const [selectedOptions, setSelectedOptions] = useState<string[]>([])
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && searchTerm.trim() !== "") {
       setSuggestions([...suggestions, searchTerm.trim()])
       setSelectedOptions([...selectedOptions, searchTerm.trim()])
@@ -31,7 +31,7 @@ export default function SearchInput() {
     return matchedSuggestions
   }, [searchTerm, suggestions])
 
-  const handleOptionSelect = (option) => {
+  const handleOptionSelect = (option: string) => {
     if (selectedOptions.includes(option)) {
       setSelectedOptions(selectedOptions.filter((o) => o !== option))
     } else {
@@ -44,7 +44,7 @@ export default function SearchInput() {
         {selectedOptions.map((option) => (
           <div
             key={option}
-            className="bg-gray-200 dark:bg-gray-800 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-2"
+            className="bg-gray-200 dark:bg-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-2"
           >
             {option}
             <button
@@ -60,7 +60,7 @@ export default function SearchInput() {
       <div className="relative">
         <Input
           type="search"
-          placeholder="Search or type your own..."
+          placeholder="Find it or type your own..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyDown={handleKeyDown}
@@ -86,7 +86,7 @@ export default function SearchInput() {
   )
 }
 
-function SearchIcon(props) {
+function SearchIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -106,7 +106,7 @@ function SearchIcon(props) {
   )
 }
 
-function XIcon(props) {
+function XIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

@@ -4,7 +4,14 @@ import { CSS } from "@dnd-kit/utilities";
 // import "./dnd.css"
 import { Button } from "../ui/button";
 
-export const Task = ({ id, title, showDetails, onDetailsClick }) => {
+interface TaskProps {
+  id: string;
+  title: string;
+  onDetailsClick: (taskId: string) => void;
+  onCheckClick: (taskId: string, checked: boolean) => void;
+}
+
+export const Task: React.FC<TaskProps> = ({ id, title, onDetailsClick, onCheckClick}) => {
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id });
 
@@ -22,9 +29,9 @@ export const Task = ({ id, title, showDetails, onDetailsClick }) => {
       {...listeners}
       className="dnd-task"
     >
-      <input type="checkbox" className="dnd-checkbox" />
+      <input type="checkbox" className="dnd-checkbox" onChange={(e) => onCheckClick(title, e.target.checked)} />
       {title}
-      <Button variant="outline" size="sm" onClick={onDetailsClick}> Details </Button>
+      <Button variant="outline" size="sm" onClick={() => onDetailsClick(title)}> Details </Button>
     </div>
   );
 };

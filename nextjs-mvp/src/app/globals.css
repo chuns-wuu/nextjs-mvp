@@ -1,138 +1,216 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
 
-  @layer base {
-    :root {
-      --background: 0 0% 100%;
-      --foreground: 222.2 84% 4.9%;
 
-      --card: 0 0% 100%;
-      --card-foreground: 222.2 84% 4.9%;
-
-      --popover: 0 0% 100%;
-      --popover-foreground: 222.2 84% 4.9%;
-
-      --primary: 222.2 47.4% 11.2%;
-      --primary-foreground: 210 40% 98%;
-
-      --secondary: 210 40% 96.1%;
-      --secondary-foreground: 222.2 47.4% 11.2%;
-
-      --muted: 210 40% 96.1%;
-      --muted-foreground: 215.4 16.3% 46.9%;
-
-      --accent: 210 40% 96.1%;
-      --accent-foreground: 222.2 47.4% 11.2%;
-
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 210 40% 98%;
-
-      --border: 214.3 31.8% 91.4%;
-      --input: 214.3 31.8% 91.4%;
-      --ring: 222.2 84% 4.9%;
-
-      --radius: 0.5rem;
-    }
-
-    .dark {
-      --background: 222.2 84% 4.9%;
-      --foreground: 210 40% 98%;
-
-      --card: 222.2 84% 4.9%;
-      --card-foreground: 210 40% 98%;
-
-      --popover: 222.2 84% 4.9%;
-      --popover-foreground: 210 40% 98%;
-
-      --primary: 210 40% 98%;
-      --primary-foreground: 222.2 47.4% 11.2%;
-
-      --secondary: 217.2 32.6% 17.5%;
-      --secondary-foreground: 210 40% 98%;
-
-      --muted: 217.2 32.6% 17.5%;
-      --muted-foreground: 215 20.2% 65.1%;
-
-      --accent: 217.2 32.6% 17.5%;
-      --accent-foreground: 210 40% 98%;
-
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 210 40% 98%;
-
-      --border: 217.2 32.6% 17.5%;
-      --input: 217.2 32.6% 17.5%;
-      --ring: 212.7 26.8% 83.9%;
-    }
-
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
-
-    .h1 {
-      @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
-    }
-    .h2 {
-      @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
-    }
-    .h3 {
-      @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
-    }
-
-    .logo-banner {
-      overflow: hidden;
-      width: 100%;
-      white-space: nowrap;
-    }
-    
-    .logo-banner-track {
-      display: flex;
-      width: 19%;
-    }
-    
-    .logo {
-      width: 100px; /* Adjust the size as needed */
-      margin-right: 20px; /* Adjust the spacing as needed */
-    }
-
-    .card {
-      font-size: 164px;
-      width: 300px;
-      height: 430px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 0 2px hsl(0deg 0% 0% / 0.075),
-        0 0 4px hsl(0deg 0% 0% / 0.075), 0 0 8px hsl(0deg 0% 0% / 0.075),
-        0 0 16px hsl(0deg 0% 0% / 0.075);
-      transform-origin: 10% 60%;
-    }
-    
-    .card-container {
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      padding-top: 20px;
-      margin-bottom: -120px;
-    }
-    
-    .splash {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      top: 0;
-      clip-path: path(
-        "M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z"
-      );
-    }
-    
-    
+@layer base {
+  :root {
+    --hard-shadow: 0px 29px 52px 0px rgba(0, 0, 0, 0.4),
+      22px 25px 16px 0px rgba(0, 0, 0, 0.2);
+    --hard-shadow-left: 0px 29px 52px 0px rgba(0, 0, 0, 0.4),
+      -22px 25px 16px 0px rgba(0, 0, 0, 0.2);
+    /* If you use Shadcn UI already, you should already have these variables defined */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --radius: 0.5rem;
   }
+
+  .dark {
+    /* If you use Shadcn UI already, you can skip this block. */
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary-foreground: 144.9 80.4% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+  }
+
+  *,
+  ::before,
+  ::after {
+    @apply border-gray-100 dark:border-neutral-800;
+  }
+
+  * {
+    @apply font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold font-display;
+  }
+
+  /* body {
+    @apply bg-background text-foreground;
+  }
+
+  .h1 {
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+  }
+  .h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+  .h3 {
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  } */
+
+  .logo-banner {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+  }
+  
+  .logo-banner-track {
+    display: flex;
+    width: 19%;
+  }
+  
+  .logo {
+    width: 100px; /* Adjust the size as needed */
+    margin-right: 20px; /* Adjust the spacing as needed */
+  }
+
+  .card {
+    font-size: 164px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 20px;
+    /* box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 0 2px hsl(0deg 0% 0% / 0.075),
+      0 0 4px hsl(0deg 0% 0% / 0.075), 0 0 8px hsl(0deg 0% 0% / 0.075),
+      0 0 16px hsl(0deg 0% 0% / 0.075); */
+    transform-origin: 10% 60%;
+  }
+  
+  .card-container {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 20px;
+    margin-bottom: -120px;
+  }
+  
+  .splash {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    clip-path: path(
+      "M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z"
+    );
+  }
+  
+  .gradient-text {
+    background: linear-gradient(90deg, #000000, #e2e2e2dd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /**
+   * Perspective (used for images etc.)
+   */
+  .perspective-none {
+    transform: none;
+  }
+
+  .perspective-left {
+    box-shadow: var(--hard-shadow);
+    transform: perspective(400em) rotateY(-15deg) rotateX(6deg)
+      skew(-8deg, 4deg) translate3d(-4%, -2%, 0) scale(0.8);
+  }
+
+  .perspective-right {
+    box-shadow: var(--hard-shadow-left);
+    transform: perspective(400em) rotateY(15deg) rotateX(6deg) skew(8deg, -4deg)
+      translate3d(4%, -2%, 0) scale(0.8);
+  }
+
+  .perspective-bottom {
+    box-shadow: var(--hard-shadow);
+    transform: translateY(-4%) perspective(400em) rotateX(18deg) scale(0.9);
+  }
+
+  .perspective-bottom-lg {
+    box-shadow: var(--hard-shadow);
+    transform: perspective(400em) translate3d(0, -6%, 0) rotateX(34deg)
+      scale(0.8);
+  }
+
+  .perspective-paper {
+    box-shadow: var(--hard-shadow);
+    transform: rotateX(40deg) rotate(40deg) scale(0.8);
+  }
+
+  .perspective-paper-left {
+    box-shadow: var(--hard-shadow-left);
+    transform: rotateX(40deg) rotate(-40deg) scale(0.8);
+  }
+
+  /**
+   * Custom shadows
+   */
+  .hard-shadow {
+    box-shadow: var(--hard-shadow);
+  }
+
+  .hard-shadow-left {
+    box-shadow: var(--hard-shadow-left);
+  }
+
+  /**
+   * Container utilities
+   */
+  .container-narrow {
+    @apply max-w-4xl;
+  }
+
+  .container-wide {
+    @apply xl:max-w-6xl;
+  }
+
+  .container-ultrawide {
+    @apply xl:max-w-7xl;
+  }
+
+}

@@ -10,24 +10,24 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 
 export default function MultiSelectBubble() {
-  const [options, setOptions] = useState(["ElasticSearch", "MongoDB", "MySQL"])
+  const [options, setOptions] = useState<string[]>(["ElasticSearch", "MongoDB", "MySQL"])
   const [customOption, setCustomOption] = useState("")
-  const [selectedOptions, setSelectedOptions] = useState([])
-  const handleKeyDown = (e) => {
+  const [selectedOptions, setSelectedOptions] = useState<string[]>([])
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && customOption.trim() !== "") {
       setOptions([...options, customOption.trim()])
       setSelectedOptions([...selectedOptions, customOption.trim()])
       setCustomOption("")
     }
   }
-  const handleOptionSelect = (option) => {
+  const handleOptionSelect = (option: string) => {
     if (selectedOptions.includes(option)) {
       setSelectedOptions(selectedOptions.filter((o) => o !== option))
     } else {
       setSelectedOptions([...selectedOptions, option])
     }
   }
-  const handleCustomOptionChange = (e) => {
+  const handleCustomOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCustomOption(e.target.value)
   }
   return (
@@ -98,7 +98,7 @@ export default function MultiSelectBubble() {
   )
 }
 
-function PlusIcon(props) {
+function PlusIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -119,7 +119,7 @@ function PlusIcon(props) {
 }
 
 
-function XIcon(props) {
+function XIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
