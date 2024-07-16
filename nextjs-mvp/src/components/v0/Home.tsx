@@ -61,7 +61,7 @@ export default function HomePage() {
         </p>
         <DemoAnimation />
       </div>
-      <div className="space-y-6 items-center justify-center flex flex-col">
+      {/* <div className="space-y-6 items-center justify-center flex flex-col">
         <h1 className="text-3xl lg:pt-56 pt-10 font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Auto-update incident runbooks
         </h1>
@@ -79,7 +79,7 @@ export default function HomePage() {
           Join the waitlist
         </Link>
         <DemoAnimation />
-      </div>
+      </div> */}
 
       {/* <FAQ /> */}
     </section>

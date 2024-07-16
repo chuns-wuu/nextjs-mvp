@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const logos = [
-  '/assets/cat.webp',
-  '/assets/cat2.jpg',
-  '/assets/cat.webp',
-  '/assets/cat2.jpg',
-  '/assets/cat.webp',
-  '/assets/cat2.jpg',
-  '/assets/cat.webp',
-  '/assets/cat2.jpg',
-  '/assets/cat.webp',
-  '/assets/cat2.jpg'
+  '/assets/adobe.png',
+  '/assets/adp.png',
+  '/assets/mailchimp.png',
+  '/assets/shopify.png',
+  '/assets/spotify.png',
+  '/assets/tripadvisor.png',
+  '/assets/twitch.png',
+  '/assets/adobe.png',
+  '/assets/adp.png',
+  '/assets/mailchimp.png'
 ]
 
 const LogoSroll = () => {
