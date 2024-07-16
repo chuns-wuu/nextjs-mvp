@@ -61,6 +61,8 @@ export default function FAQ() {
         </CollapsibleContent>
       </Collapsible>
     </div>
+  )
+}
 
 function ChevronRightIcon(props: any) {
   return (
