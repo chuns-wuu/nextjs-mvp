@@ -44,7 +44,7 @@ export default function SearchInput() {
         {selectedOptions.map((option) => (
           <div
             key={option}
-            className="bg-gray-200 dark:bg-gray-800 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-2"
+            className="bg-gray-200 dark:bg-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-2"
           >
             {option}
             <button

@@ -8,14 +8,14 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectGroup, SelectItem } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
 import MultiSelectBubble from "./components/MultiSelectBubble"
-import { Progress } from "../ui/progress"
+import { Progress } from "@/components/ui/progress"
 import SearchInput from "./components/SearchInput"
 import Link from "next/link"
 
 export default function ServiceForm() {
   return (
     <div className="flex flex-col items-center w-full">
-      <Progress value={33} />
+      <Progress value={33}/>
       <div className="flex flex-row items-center justify-between w-3/4 py-6 ">
         <Link
           href="/new/0"
