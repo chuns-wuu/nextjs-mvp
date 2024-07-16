@@ -8,13 +8,13 @@
 import { useState, useMemo } from "react"
 import { Input } from "@/components/ui/input"
 
-export default function SearchInput() {
+interface SearchInputList{
+  suggestionList: string[]
+}
+
+export default function SearchInput({suggestionList}: SearchInputList) {
   const [searchTerm, setSearchTerm] = useState("")
-  const [suggestions, setSuggestions] = useState<string[]>([
-    "MySQL",
-    "Postgres",
-    "MongoDB"
-  ])
+  const [suggestions, setSuggestions] = useState<string[]>(suggestionList)
   const [selectedOptions, setSelectedOptions] = useState<string[]>([])
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {

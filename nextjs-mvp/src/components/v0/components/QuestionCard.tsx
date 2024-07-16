@@ -30,7 +30,7 @@ export default function QuestionCard() {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="text-lg font-medium">Which layers caused the incident?</p>
-          <SearchInput />
+          <SearchInput suggestionList={["Database", "Network", "Application", "Deployment", "Test"]}/>
         </CardContent>
       </Card>,
       <Card key="second" className="w-screen max-w-md">
@@ -39,7 +39,7 @@ export default function QuestionCard() {
           <CardTitle>Question 2/6</CardTitle>
           <Button variant="outline" onClick={() => onNextClick(1)}>Next</Button>
         </CardHeader>
-        <CardContent className="space-y-4 ">
+        <CardContent className="space-y-4">
           <p className="text-lg font-medium">What was the impact?</p>
           <div className="flex flex-row justify-between items-center gap-6">
             <Input placeholder="Who"/> couldn&#39;t <Input placeholder="What"/> for <Input placeholder="How long"/>
@@ -55,26 +55,12 @@ export default function QuestionCard() {
         <CardContent className="space-y-4 ">
           <p className="text-lg font-medium">Was it caught by QA or tests?</p>
           <div className="flex flex-row justify-between items-center gap-6">
-            <Button>Missing or buggy test</Button>
-            <Button>Yes, it was caught</Button>
+            <Button variant={"outline"}>Yes</Button>
+            <Button variant={"outline"}>No</Button>
           </div>
         </CardContent>
       </Card>,
       <Card key="fourth" className="w-screen max-w-md">
-        <CardHeader className="flex flex-row justify-between">
-          <Button variant="outline" onClick={() => onPrevClick(3)}>Prev</Button>
-          <CardTitle>Question 3/6</CardTitle>
-          <Button variant="outline" onClick={() => onNextClick(3)}>Next</Button>
-        </CardHeader>
-        <CardContent className="space-y-4 ">
-          <p className="text-lg font-medium">Was it caught by QA or tests?</p>
-          <div className="flex flex-row justify-between items-center gap-6">
-            <Button>Missing or buggy test</Button>
-            <Button>Yes, it was caught</Button>
-          </div>
-        </CardContent>
-      </Card>,
-      <Card key="fifth" className="w-screen max-w-md">
         <CardHeader className="flex flex-row justify-between">
           <Button variant="outline" onClick={() => onPrevClick(4)}>Prev</Button>
           <CardTitle>Question 4/6</CardTitle>
@@ -83,11 +69,11 @@ export default function QuestionCard() {
         <CardContent className="space-y-4 ">
           <p className="text-lg font-medium">What conditions triggered the incident this time?</p>
           <div className="flex flex-row justify-between items-center gap-6">
-          <SearchInput />
+          <SearchInput suggestionList={["Code changes", "Traffic spikes", "QA testing", "Security patches"]}/>
           </div>
         </CardContent>
       </Card>,
-      <Card key="sixth" className="w-screen max-w-md">
+      <Card key="fifth" className="w-screen max-w-md">
         <CardHeader className="flex flex-row justify-between">
           <Button variant="outline" onClick={() => onPrevClick(5)}>Prev</Button>
           <CardTitle>Question 5/6</CardTitle>
@@ -96,11 +82,11 @@ export default function QuestionCard() {
         <CardContent className="space-y-4 ">
           <p className="text-lg font-medium">What were the root causes in your own words?</p>
           <div className="flex flex-row justify-between items-center gap-6">
-          <SearchInput />
+            <Input></Input>
           </div>
         </CardContent>
       </Card>,
-      <Card key="seventh" className="w-screen max-w-md">
+      <Card key="sixth" className="w-screen max-w-md">
         <CardHeader className="flex flex-row justify-between">
           <Button variant="outline" onClick={() => onPrevClick(6)}>Prev</Button>
           <CardTitle>Question 6/6</CardTitle>
@@ -109,17 +95,14 @@ export default function QuestionCard() {
         <CardContent className="space-y-4 ">
           <p className="text-lg font-medium">What writing template do you prefer?</p>
           <div className="flex flex-row justify-between items-center gap-6">
-            <Button>Atlanssian</Button>
-            <Button>Technical</Button>
+            <Button variant={"outline"}>Atlanssian</Button>
+            <Button variant={"outline"}>Verbose</Button>
           </div>
         </CardContent>
       </Card>
   ]
 
   const [visibleQuestion, setVisibleQuestion] = useState<ReactElement>(questionCards[0])
-
-
-
 
 
   return (
