@@ -37,7 +37,7 @@ export default function ServiceForm() {
         <div>
           <Label htmlFor="incidentService">Select relevant technologies:</Label>
         </div>
-        <SearchInput />
+        <SearchInput suggestionList={["Python", "Java", "Javascript", "Ruby on Rails", "ElasticSearch", "MongoDB", "AWS RDS", "AWS CloudFront"]}/>
       </div>
     </div>
   )
