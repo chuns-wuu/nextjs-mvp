@@ -83,6 +83,7 @@ import { fontFamily } from 'tailwindcss/defaultTheme';
 import { colors } from './src/data/config/colors';
 
 const config: Config = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
