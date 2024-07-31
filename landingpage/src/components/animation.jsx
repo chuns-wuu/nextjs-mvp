@@ -19,8 +19,53 @@ const svgVariants = {
    }
 }
 
-// the workflow animation
-const specialVariants = {
+const dataSourceVariants = {
+   initial: {
+      stroke: "#bdbdbd",
+      pathLength: 0,
+      pathSpacing: 0.2 
+   },
+   animate: {
+      stroke: "#2c3a2c",
+      pathLength: 1,
+      pathSpacing: 0.2,
+      transition: {
+         delay: 0,
+         duration: 1,
+         repeat: Infinity,
+         repeatType: "loop",
+         repeatDelay: 6
+      }
+   },
+   transition: {
+      ease: "linear"
+   }
+}
+
+const dataSourcePathVariants = {
+   initial: {
+      stroke: "#bdbdbd",
+      pathLength: 0,
+      pathSpacing: 0.2 
+   },
+   animate: {
+      stroke: "#2c3a2c",
+      pathLength: 1,
+      pathSpacing: 0.2,
+      transition: {
+         delay: 1,
+         duration: 1,
+         repeat: Infinity,
+         repeatType: "loop",
+         repeatDelay: 6
+      }
+   },
+   transition: {
+      ease: "linear"
+   }
+}
+
+const retroxVariants = {
    initial: {
       stroke: "#bdbdbd",
       pathLength: 0,
@@ -32,10 +77,10 @@ const specialVariants = {
       pathSpacing: 0.2,
       transition: {
          delay: 2,
-         duration: 0,
+         duration: 2,
          repeat: Infinity,
          repeatType: "loop",
-         repeatDelay: 3
+         repeatDelay: 5
       }
    },
    transition: {
@@ -43,7 +88,7 @@ const specialVariants = {
    }
 }
 
-const subspecialVariants = {
+const retroxPathVariants = {
    initial: {
       stroke: "#bdbdbd",
       pathLength: 0,
@@ -58,7 +103,30 @@ const subspecialVariants = {
          duration: 1,
          repeat: Infinity,
          repeatType: "loop",
-         repeatDelay: 4
+         repeatDelay: 6
+      }
+   },
+   transition: {
+      ease: "linear"
+   }
+}
+
+const alertVariants = {
+   initial: {
+      stroke: "#bdbdbd",
+      pathLength: 0,
+      pathSpacing: 0.2 
+   },
+   animate: {
+      stroke: "#2c3a2c",
+      pathLength: 1,
+      pathSpacing: 0.2,
+      transition: {
+         delay: 5,
+         duration: 1,
+         repeat: Infinity,
+         repeatType: "loop",
+         repeatDelay: 6
       }
    },
    transition: {
@@ -95,23 +163,20 @@ export default function Animation(props) {
        }}
        id="dashed data source box 2"
     />
-    <rect
+    <motion.rect
       width={76.835}
       height={41.1}
       x={18.027}
       y={165.062}
       ry={3.338}
-      style={{
-        fill: "#fff",
-        fillOpacity: 1,
-        stroke: "#bcbcbc",
-        strokeWidth: 0.583371,
-        strokeLinecap: "round",
-        strokeLinejoin: "round",
-        strokeDasharray: "4.66695,2.33349",
-        strokeDashoffset: 0,
-        strokeOpacity: 1,
-      }}
+      stroke={"#bcbcbc"}
+      fill={"#fff"}
+      fillOpacity={1}
+      strokeWidth={0.583371}
+      variants={alertVariants}
+      initial="initial"
+      animate="animate"
+      transition="transition"
       id="report box"
     />
     <rect
@@ -139,15 +204,15 @@ export default function Animation(props) {
       x={22.362}
       y={113.591}
       ry={2.688}
-      strokeWidth={0.471}
+      strokeWidth={0.583371}
       fill={"#fff"}
       fillOpacity={1}
-      stroke={"#000"}
-      variants={specialVariants}
+      stroke={"#bcbcbc"}
+      variants={retroxVariants}
       initial="initial"
       animate="animate"
       transition="transition"
-      id="retrox"
+      id="big retrox box"
     />
     <text
       xmlSpace="preserve"
@@ -186,43 +251,37 @@ export default function Animation(props) {
         strokeOpacity: 1,
       }}
     />
-    <rect
+    <motion.rect
       width={28.051}
       height={9.133}
       x={101.743}
       y={81.007}
       ry={3.168}
-      style={{
-        fill: "none",
-        fillOpacity: 1,
-        stroke: "#bcbcbc",
-        strokeWidth: 0.438193,
-        strokeLinecap: "round",
-        strokeLinejoin: "round",
-        strokeDasharray: "none",
-        strokeDashoffset: 0,
-        strokeOpacity: 1,
-        paintOrder: "fill markers stroke",
-      }}
+      stroke={"#bcbcbc"}
+      strokeWidth={0.445}
+      fill={"none"}
+      fillOpacity={1}
+      variants={dataSourceVariants}
+      initial="initial"
+      animate="animate"
+      transition="transition"
+      id="right number box"
     />
-    <rect
+    <motion.rect
       width={28.931}
       height={9.126}
       x={65.512}
       y={80.918}
       ry={2.932}
-      style={{
-        fill: "none",
-        fillOpacity: 1,
-        stroke: "#bcbcbc",
-        strokeWidth: 0.445,
-        strokeLinecap: "round",
-        strokeLinejoin: "round",
-        strokeDasharray: "none",
-        strokeDashoffset: 0,
-        strokeOpacity: 1,
-        paintOrder: "fill markers stroke",
-      }}
+      stroke={"#bcbcbc"}
+      strokeWidth={0.445}
+      fill={"none"}
+      fillOpacity={1}
+      variants={dataSourceVariants}
+      initial="initial"
+      animate="animate"
+      transition="transition"
+      id="left number box"
     />
     <text
       xmlSpace="preserve"
@@ -314,30 +373,26 @@ export default function Animation(props) {
       fill={"#dbf8d7"}
       fillOpacity={1}
       stroke={"#000"}
-      variants={specialVariants}
+      variants={retroxVariants}
       initial="initial"
       animate="animate"
+      transition="transition"
       id="retrox title"
     />
-    <rect
+    <motion.rect
       width={48.118}
       height={8.727}
       x={32.179}
       y={160.718}
       ry={1.565}
-      style={{
-        fill: "#dbf8d7",
-        fillOpacity: 1,
-        stroke: "#bdbdbd",
-        strokeWidth: 0.371007,
-        strokeLinecap: "round",
-        strokeLinejoin: "miter",
-        strokeMiterlimit: 2,
-        strokeDasharray: "none",
-        strokeDashoffset: 0,
-        strokeOpacity: 1,
-        paintOrder: "fill markers stroke",
-      }}
+      stroke={"#bdbdbd"}
+      fill={"#dbf8d7"}
+      fillOpacity={1}
+      strokeWidth={0.371007}
+      variants={alertVariants}
+      initial="initial"
+      animate="animate"
+      transition="transition"
       id="reports title"
     />
     <text
@@ -418,44 +473,37 @@ export default function Animation(props) {
         {"reports"}
       </tspan>
     </text>
-    <rect
+    <motion.rect
       width={76.835}
       height={41.1}
       x={104.905}
       y={164.391}
       ry={3.338}
-      style={{
-         fill: "#fff",
-         fillOpacity: 1,
-         stroke: "#bcbcbc",
-         strokeWidth: 0.583371,
-         strokeLinecap: "round",
-         strokeLinejoin: "round",
-         strokeDasharray: "4.66695,2.33349",
-         strokeDashoffset: 0,
-         strokeOpacity: 1,
-       }}
+      stroke={"#bcbcbc"}
+      fill={"#fff"}
+      fillOpacity={1}
+      strokeWidth={0.583371}
+      variants={alertVariants}
+      initial="initial"
+      animate="animate"
+      transition="transition"
       id="alert management box"
     />
-    <rect
+    <motion.rect
       width={55.348}
       height={8.701}
       x={116.651}
       y={160.061}
       ry={1.56}
-      style={{
-        fill: "#dbf8d7",
-        fillOpacity: 1,
-        stroke: "#bdbdbd",
-        strokeWidth: 0.397307,
-        strokeLinecap: "round",
-        strokeLinejoin: "miter",
-        strokeMiterlimit: 2,
-        strokeDasharray: "none",
-        strokeDashoffset: 0,
-        strokeOpacity: 1,
-        paintOrder: "fill markers stroke",
-      }}
+      stroke={"#bdbdbd"}
+      fill={"#dbf8d7"}
+      fillOpacity={1}
+      strokeWidth={0.397307}
+      variants={alertVariants}
+      initial="initial"
+      animate="animate"
+      transition="transition"
+      id="alert management title"
     />
     <text
       xmlSpace="preserve"
@@ -523,7 +571,7 @@ export default function Animation(props) {
       fill={"#dfdddd"}
       fillOpacity={1}
       stroke={"#000"}
-      variants={specialVariants}
+      variants={retroxVariants}
       initial="initial"
       animate="animate"
       transition="transition"
@@ -698,7 +746,7 @@ export default function Animation(props) {
       fill={"#dfdddd"}
       fillOpacity={1}
       stroke={"#000"}
-      variants={specialVariants}
+      variants={retroxVariants}
       initial="initial"
       animate="animate"
       transition="transition"
@@ -873,7 +921,7 @@ export default function Animation(props) {
       fill={"#dfdddd"}
       fillOpacity={1}
       stroke={"#000"}
-      variants={specialVariants}
+      variants={retroxVariants}
       initial="initial"
       animate="animate"
       transition="transition"
@@ -1144,7 +1192,7 @@ export default function Animation(props) {
           strokeDasharray: "none",
         }}
       >
-        {"-$0.79/min"}
+        {"P(A) U P(B)"}
       </tspan>
     </text>
     <text
@@ -1323,18 +1371,17 @@ export default function Animation(props) {
       </tspan>
     </text> 
     {/* the three stokes */}
-    <path
+    <motion.path
       d="m98.195 94.231.07 15.091v0"
-      style={{
-        fill: "none",
-        fillOpacity: 1,
-        stroke: "#bdbdbd",
-        strokeWidth: 0.408001,
-        strokeLinecap: "round",
-        strokeMiterlimit: 2,
-        strokeOpacity: 1,
-        paintOrder: "fill markers stroke",
-      }}
+      strokeWidth={0.405531}
+      fill={"none"}
+      fillOpacity={1}
+      stroke={"#000"}
+      variants={dataSourcePathVariants}
+      initial="initial"
+      animate="animate"
+      transition="transition"
+      id="data source path"
     />
     <motion.path
       d="m57.15 146.78.075 13.668v0"
@@ -1342,7 +1389,7 @@ export default function Animation(props) {
       fill={"none"}
       fillOpacity={1}
       stroke={"#000"}
-      variants={subspecialVariants}
+      variants={retroxPathVariants}
       initial="initial"
       animate="animate"
       transition="transition"
@@ -1354,7 +1401,7 @@ export default function Animation(props) {
       fill={"none"}
       fillOpacity={1}
       stroke={"#000"}
-      variants={subspecialVariants}
+      variants={retroxPathVariants}
       initial="initial"
       animate="animate"
       transition="transition"
