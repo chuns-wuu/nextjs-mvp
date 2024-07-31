@@ -122,12 +122,12 @@ const alertVariants = {
 
 
 export default function Animation(props) {
-   return <div>
+   return <div className='w-full rounded-md relative'> 
   <motion.svg
     xmlns="http://www.w3.org/2000/svg"
-    width="210mm"
-    height="297mm"
-    viewBox="0 0 210 297"
+    width="280mm"
+    height="150mm"
+    viewBox="0 30 400 220"
     {...props}
   >
     <rect

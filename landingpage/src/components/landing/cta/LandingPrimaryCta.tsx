@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import Image from '@/components/shared/Image';
 import { GlowBg } from '@/components/shared/ui/glow-bg';
 import { VideoPlayer } from '@/components/shared/VideoPlayer';
+import Animation from "@/components/animation";
 
 const LandingPrimaryCtaContent = ({
   className,
@@ -194,7 +195,7 @@ export const LandingPrimaryImageCtaSection = ({
             ) : null}
 
             {imagePosition === 'left' || imagePosition === 'right' ? (
-              <Image
+              <div
                 className={clsx(
                   'w-full rounded-md relative z-10',
                   imageShadow === 'soft' && 'shadow-md',
@@ -208,11 +209,9 @@ export const LandingPrimaryImageCtaSection = ({
                     'lg:ml-[7%] lg:perspective-paper',
                   imagePerspective === 'none' ? 'my-4' : 'my-8',
                 )}
-                alt={imageAlt}
-                src={imageSrc}
-                width={minHeight + 75}
-                height={minHeight + 75}
-              />
+              >
+                  <Animation />
+              </div>
             ) : null}
           </>
         ) : null}
@@ -335,7 +334,7 @@ export const LandingPrimaryVideoCtaSection = ({
 
             {videoPosition === 'center' ? (
               <section className={clsx('w-full mt-6 md:mt-8')}>
-                <VideoPlayer
+                {/* <VideoPlayer
                   className={clsx(
                     'w-full rounded-md overflow-hidden',
                     videoShadow === 'soft' && 'shadow-md',
@@ -348,25 +347,27 @@ export const LandingPrimaryVideoCtaSection = ({
                   loop={loop}
                   maxWidth={videoMaxWidth}
                   variant={variant}
-                />
+                /> */}
+                <div></div>
               </section>
             ) : null}
 
             {videoPosition === 'left' || videoPosition === 'right' ? (
-              <VideoPlayer
-                className={clsx(
-                  'w-full rounded-md overflow-hidden',
-                  videoShadow === 'soft' && 'shadow-md',
-                  videoShadow === 'hard' && 'hard-shadow',
-                )}
-                poster={videoPoster}
-                src={videoSrc}
-                autoPlay={autoPlay}
-                controls={controls}
-                loop={loop}
-                maxWidth={videoMaxWidth}
-                variant={variant}
-              />
+              // <VideoPlayer
+              //   className={clsx(
+              //     'w-full rounded-md overflow-hidden',
+              //     videoShadow === 'soft' && 'shadow-md',
+              //     videoShadow === 'hard' && 'hard-shadow',
+              //   )}
+              //   poster={videoPoster}
+              //   src={videoSrc}
+              //   autoPlay={autoPlay}
+              //   controls={controls}
+              //   loop={loop}
+              //   maxWidth={videoMaxWidth}
+              //   variant={variant}
+              // />
+              <div></div>
             ) : null}
           </>
         ) : null}
