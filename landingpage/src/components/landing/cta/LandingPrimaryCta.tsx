@@ -179,7 +179,7 @@ export const LandingPrimaryImageCtaSection = ({
             ) : null}
 
             {imagePosition === 'center' ? (
-              <section className={clsx('w-full mt-6 md:mt-8')}>
+              <section className={clsx('w-1/2 mt-6 md:mt-8')}>
                 <Image
                   className={clsx(
                     'w-full rounded-md overflow-hidden',
@@ -197,7 +197,7 @@ export const LandingPrimaryImageCtaSection = ({
             {imagePosition === 'left' || imagePosition === 'right' ? (
               <div
                 className={clsx(
-                  'w-full rounded-md relative z-10',
+                  'lg:w-full lg:h-full w-[60%] items-center justify-between rounded-md relative z-10',
                   imageShadow === 'soft' && 'shadow-md',
                   imageShadow === 'hard' && 'hard-shadow',
                   imagePerspective === 'left' && 'lg:perspective-left',
