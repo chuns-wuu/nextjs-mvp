@@ -19,7 +19,7 @@ export default function HomeSection() {
       title="Let reliability be your secret sauce."
       description="With our AI-powered APIs, we help you make sense of the SLOs, SLIs, and SLAs in the lens of customers and businesses priorities. "
       imageSrc="/static/images/product-sample.webp"
-      imageAlt="Sample image"
+      imageAlt="Animation"
       withBackground
       leadingComponent={logo}
       footerComponent={

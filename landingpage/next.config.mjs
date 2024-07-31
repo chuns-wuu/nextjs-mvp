@@ -7,6 +7,9 @@ const nextConfig = {
         hostname: 'picsum.photos',
       },
     ],
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
   },
 };
 

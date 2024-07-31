@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import Image from '@/components/shared/Image';
 import { GlowBg } from '@/components/shared/ui/glow-bg';
 import { VideoPlayer } from '@/components/shared/VideoPlayer';
+import Animation from "@/components/animation";
 
 const LandingPrimaryCtaContent = ({
   className,
@@ -194,7 +195,7 @@ export const LandingPrimaryImageCtaSection = ({
             ) : null}
 
             {imagePosition === 'left' || imagePosition === 'right' ? (
-              <Image
+              <div
                 className={clsx(
                   'w-full rounded-md relative z-10',
                   imageShadow === 'soft' && 'shadow-md',
@@ -208,11 +209,9 @@ export const LandingPrimaryImageCtaSection = ({
                     'lg:ml-[7%] lg:perspective-paper',
                   imagePerspective === 'none' ? 'my-4' : 'my-8',
                 )}
-                alt={imageAlt}
-                src={imageSrc}
-                width={minHeight + 75}
-                height={minHeight + 75}
-              />
+              >
+                  <Animation />
+              </div>
             ) : null}
           </>
         ) : null}
