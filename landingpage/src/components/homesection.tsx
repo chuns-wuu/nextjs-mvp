@@ -18,7 +18,7 @@ export default function HomeSection() {
   return (
     <LandingPrimaryImageCtaSection
       title="Let reliability be your secret sauce."
-      description="With our AI-powered APIs, we help you make sense of the SLOs, SLIs, and SLAs in the lens of customers and businesses needs. Sign up for our waitlist today."
+      description="With our AI-powered APIs, we help you make sense of the SLOs, SLIs, and SLAs in the lens of customers and businesses needs. Sign up for the early access today."
       imageSrc="/static/images/product-sample.webp"
       imageAlt="Animation"
       withBackground
@@ -52,8 +52,9 @@ export default function HomeSection() {
         </LandingTestimonialInline>
       }
     >
-      <form className="flex gap-2 w-full" >
-        <Input type="email" placeholder="Enter your email" className="w-1/2 flex-1" />
+      <form className="flex gap-2 w-full" action="https://formspree.io/f/xdknggyb" method="POST" >
+        <Input type="email" name="email" placeholder="Enter your email" className="w-1/2 flex-1" />
+       
         <Button
           type="submit"
           size="xl" 
