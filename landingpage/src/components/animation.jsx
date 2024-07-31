@@ -2,22 +2,8 @@
 
 import { delay, motion } from "framer-motion";
 
-const svgVariants = {
-   initial: {
-      pathLength: 0,
-      pathSpacing: 0.2 
-   },
-   animate: {
-      pathLength: 0.2,
-      pathSpacing: 0
-   },
-   transition: {
-      duration: 2,
-      repeat: Infinity,
-      repeatType: "loop",
-      repeatDelay: 2
-   }
-}
+// TODOs: 
+// Improve the animation's exit state
 
 const dataSourceVariants = {
    initial: {
