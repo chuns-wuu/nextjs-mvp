@@ -334,7 +334,7 @@ export const LandingPrimaryVideoCtaSection = ({
 
             {videoPosition === 'center' ? (
               <section className={clsx('w-full mt-6 md:mt-8')}>
-                <VideoPlayer
+                {/* <VideoPlayer
                   className={clsx(
                     'w-full rounded-md overflow-hidden',
                     videoShadow === 'soft' && 'shadow-md',
@@ -347,25 +347,27 @@ export const LandingPrimaryVideoCtaSection = ({
                   loop={loop}
                   maxWidth={videoMaxWidth}
                   variant={variant}
-                />
+                /> */}
+                <div></div>
               </section>
             ) : null}
 
             {videoPosition === 'left' || videoPosition === 'right' ? (
-              <VideoPlayer
-                className={clsx(
-                  'w-full rounded-md overflow-hidden',
-                  videoShadow === 'soft' && 'shadow-md',
-                  videoShadow === 'hard' && 'hard-shadow',
-                )}
-                poster={videoPoster}
-                src={videoSrc}
-                autoPlay={autoPlay}
-                controls={controls}
-                loop={loop}
-                maxWidth={videoMaxWidth}
-                variant={variant}
-              />
+              // <VideoPlayer
+              //   className={clsx(
+              //     'w-full rounded-md overflow-hidden',
+              //     videoShadow === 'soft' && 'shadow-md',
+              //     videoShadow === 'hard' && 'hard-shadow',
+              //   )}
+              //   poster={videoPoster}
+              //   src={videoSrc}
+              //   autoPlay={autoPlay}
+              //   controls={controls}
+              //   loop={loop}
+              //   maxWidth={videoMaxWidth}
+              //   variant={variant}
+              // />
+              <div></div>
             ) : null}
           </>
         ) : null}

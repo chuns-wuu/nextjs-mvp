@@ -29,26 +29,21 @@ export default function DetailSection() {
         controls={false}
         textPosition="center"
         videoPosition="center"
-        videoSrc="https://cache.shipixen.com/features/11-pricing-page-builder.mp4"
+        videoSrc=""
         withBackground
         variant="secondary"
-        leadingComponent={
-          <p className="font-cursive font-semibold tracking-wider bg-clip-text bg-gradient-to-r text-transparent from-pink-500 via-pink-400 to-pink-500">
-            Video Editing and Shorts made Easy
-          </p>
-        }
       >
         <div className="w-full mt-6 flex justify-center gap-4">
           <Button size="xl" className="p-7 text-xl" variant="secondary" asChild>
-            <a href="#">Start free today</a>
+            <a href="#">Join the waitlist</a>
           </Button>
         </div>
 
         <LandingSocialProof
           className="w-full mt-6 justify-center"
           showRating
-          numberOfUsers={25000}
-          suffixText="happy editors"
+          numberOfUsers={100}
+          suffixText="technical leaders"
           avatarItems={avatarItems}
           size="large"
           disableAnimation
