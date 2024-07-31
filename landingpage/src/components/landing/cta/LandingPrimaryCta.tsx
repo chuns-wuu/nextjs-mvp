@@ -38,7 +38,7 @@ const LandingPrimaryCtaContent = ({
       {leadingComponent}
 
       {title ? (
-        <h1 className="text-4xl lg:text-5xl lg:leading-14 font-semibold md:max-w-xl">
+        <h1 className="text-4xl lg:text-5xl lg:leading-14 font-semibold ">
           {title}
         </h1>
       ) : (
@@ -122,7 +122,7 @@ export const LandingPrimaryImageCtaSection = ({
   return (
     <section
       className={clsx(
-        'w-full flex flex-col justify-center items-center gap-8 py-12 lg:py-16',
+        'w-full flex flex-col justify-center items-center gap-8 py-12 lg:py-16 ',
         withBackground && variant === 'primary'
           ? 'bg-primary-100/20 dark:bg-primary-900/10'
           : '',
@@ -179,7 +179,7 @@ export const LandingPrimaryImageCtaSection = ({
             ) : null}
 
             {imagePosition === 'center' ? (
-              <section className={clsx('w-full mt-6 md:mt-8')}>
+              <section className={clsx('w-1/2 mt-6 md:mt-8')}>
                 <Image
                   className={clsx(
                     'w-full rounded-md overflow-hidden',
@@ -197,7 +197,7 @@ export const LandingPrimaryImageCtaSection = ({
             {imagePosition === 'left' || imagePosition === 'right' ? (
               <div
                 className={clsx(
-                  'w-full rounded-md relative z-10',
+                  'lg:w-full lg:h-full w-[60%] items-center justify-between rounded-md relative z-10',
                   imageShadow === 'soft' && 'shadow-md',
                   imageShadow === 'hard' && 'hard-shadow',
                   imagePerspective === 'left' && 'lg:perspective-left',

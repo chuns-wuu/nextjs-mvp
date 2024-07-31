@@ -17,7 +17,7 @@ export default function HomeSection() {
 
   return (
     <LandingPrimaryImageCtaSection
-      title="Let reliability be your secret sauce."
+      title="Let effortless reliability be your secret sauce."
       description="With our AI-powered APIs, we help you make sense of the SLOs, SLIs, and SLAs in the lens of customers and businesses needs. Sign up for the early access today."
       imageSrc="/static/images/product-sample.webp"
       imageAlt="Animation"

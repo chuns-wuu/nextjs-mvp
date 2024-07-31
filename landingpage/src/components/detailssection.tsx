@@ -23,8 +23,8 @@ export default function DetailSection() {
   return (
     <>
       <LandingPrimaryVideoCtaSection
-        title="Visually align reliability."
-        description="SLO isn't just a number. It's your service's HEART BEAT. See how Retrox is the fastest way to understand reliability and ensure product stablity."
+        title="Align impact with reliability."
+        description="SLOs aren't just a number. It's your service's HEART BEAT. See how Retrox is the fastest way to understand reliability and ensure product stablity."
         autoPlay
         controls={false}
         textPosition="center"
