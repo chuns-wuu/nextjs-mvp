@@ -10,8 +10,8 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Retrox",
-  description: "Fastest way to implement SLOs",
+  title: "Retrox.io",
+  description: "Modern reliability made simple.",
 };
 
 export default function RootLayout({
