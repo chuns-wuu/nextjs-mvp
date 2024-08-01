@@ -18,7 +18,7 @@ export default function HomeSection() {
   return (
     <LandingPrimaryImageCtaSection
       title="Let effortless reliability be your secret sauce."
-      description="With our AI-powered APIs, we help you make sense of the SLOs, SLIs, and SLAs in the lens of customers and businesses needs. Sign up for the early access today."
+      description="With our AI-powered APIs, we help you make sense of the scattered SLOs, SLIs, and SLAs in the lens of customers and businesses needs. Sign up today for early access."
       imageSrc="/static/images/product-sample.webp"
       imageAlt="Animation"
       withBackground
@@ -26,25 +26,25 @@ export default function HomeSection() {
       footerComponent={
         <LandingTestimonialInline>
           <LandingTestimonialInlineItem
-            imageSrc="https://picsum.photos/id/64/100/100"
+            imageSrc="https://picsum.photos/id/63/100/100"
             name="Sr Staff Eng"
             text="SLOs are the best tool to measure and optimize reliability."
           />
 
           <LandingTestimonialInlineItem
-            imageSrc="https://picsum.photos/id/65/100/100"
+            imageSrc="https://picsum.photos/id/341/100/100"
             name="Google"
             text="Decision-makers know they can't just average them all."
           />
 
           <LandingTestimonialInlineItem
-            imageSrc="https://picsum.photos/id/829/100/100"
+            imageSrc="https://picsum.photos/id/357/100/100"
             name="Circle CI"
             text="Product Management defines an SLO."
           />
 
           <LandingTestimonialInlineItem
-            imageSrc="https://picsum.photos/id/669/100/100"
+            imageSrc="https://picsum.photos/id/331/100/100"
             name="SRE lead"
             text="Consider exploring how SLOs can benefit your organization"
           />

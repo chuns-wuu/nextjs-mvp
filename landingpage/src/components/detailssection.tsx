@@ -7,29 +7,29 @@ import { colors } from '@/data/config/colors';
 export default function DetailSection() {
   const avatarItems = [
     {
-      imageSrc: 'https://picsum.photos/id/64/100/100',
-      name: 'John Doe',
+      imageSrc: 'https://picsum.photos/id/63/100/100',
+      name: 'Sr Staff Eng',
     },
     {
-      imageSrc: 'https://picsum.photos/id/65/100/100',
-      name: 'Jane Doe',
+      imageSrc: 'https://picsum.photos/id/357/100/100',
+      name: 'Circle CI',
     },
     {
-      imageSrc: 'https://picsum.photos/id/669/100/100',
-      name: 'Alice Doe',
+      imageSrc: 'https://picsum.photos/id/341/100/100',
+      name: 'Google',
     },
   ];
 
   return (
     <>
       <LandingPrimaryVideoCtaSection
-        title="Align impact with reliability."
-        description="SLOs aren't just a number. It's your service's HEART BEAT. See how Retrox is the fastest way to understand reliability and ensure product stablity."
+        title="Unify, scale and alert."
+        description="SLOs aren't just a number. It's your service's HEART BEAT. See how our platform is the fastest way to align reliability and ensure your product's stablity."
         autoPlay
         controls={false}
         textPosition="center"
         videoPosition="center"
-        videoSrc=""
+        videoSrc="/"
         withBackground
         variant="secondary"
       >
@@ -42,8 +42,8 @@ export default function DetailSection() {
         <LandingSocialProof
           className="w-full mt-6 justify-center"
           showRating
-          numberOfUsers={100}
-          suffixText="technical leaders"
+          numberOfUsers={20}
+          suffixText="industry leaders"
           avatarItems={avatarItems}
           size="large"
           disableAnimation

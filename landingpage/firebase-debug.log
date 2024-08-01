@@ -1676,3 +1676,680 @@ info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/d
 [info] 
 [info] Project Console: https://console.firebase.google.com/project/retroxsignup/overview
 [info] Hosting URL: https://retroxsignup.web.app
+[debug] [2024-07-31T21:26:56.555Z] ----------------------------------------------------------------------
+[debug] [2024-07-31T21:26:56.560Z] Command:       /opt/homebrew/Cellar/node/22.2.0/bin/node /opt/homebrew/bin/firebase deploy --debug
+[debug] [2024-07-31T21:26:56.560Z] CLI Version:   13.14.2
+[debug] [2024-07-31T21:26:56.560Z] Platform:      darwin
+[debug] [2024-07-31T21:26:56.560Z] Node Version:  v22.2.0
+[debug] [2024-07-31T21:26:56.560Z] Time:          Wed Jul 31 2024 17:26:56 GMT-0400 (Eastern Daylight Time)
+[debug] [2024-07-31T21:26:56.560Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-31T21:26:56.593Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-31T21:26:56.593Z] > authorizing via signed-in user (chunchun@retrox.io)
+[debug] [2024-07-31T21:26:56.593Z] [iam] checking project retroxsignup for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-07-31T21:26:56.594Z] > refreshing access token with scopes: []
+[debug] [2024-07-31T21:26:56.595Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-07-31T21:26:56.595Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-31T21:26:56.760Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-07-31T21:26:56.760Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-31T21:26:56.779Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/retroxsignup:testIamPermissions [none]
+[debug] [2024-07-31T21:26:56.779Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/retroxsignup:testIamPermissions x-goog-quota-user=projects/retroxsignup
+[debug] [2024-07-31T21:26:56.779Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/retroxsignup:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-31T21:26:56.986Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/retroxsignup:testIamPermissions 200
+[debug] [2024-07-31T21:26:56.986Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/retroxsignup:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-31T21:26:56.987Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/retroxsignup [none]
+[debug] [2024-07-31T21:26:57.278Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/retroxsignup 200
+[debug] [2024-07-31T21:26:57.279Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/retroxsignup {"projectId":"retroxsignup","projectNumber":"886523447594","displayName":"retroxsignup","name":"projects/retroxsignup","resources":{"hostingSite":"retroxsignup"},"state":"ACTIVE","etag":"1_c7404e5e-c7de-4a38-af63-7f98e1804c0e"}
+[debug] [2024-07-31T21:26:57.933Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/retroxsignup/sites pageToken=&pageSize=10
+[debug] [2024-07-31T21:26:58.313Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/retroxsignup/sites 200
+[debug] [2024-07-31T21:26:58.314Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/retroxsignup/sites {"sites":[{"name":"projects/retroxsignup/sites/retroxsignup","defaultUrl":"https://retroxsignup.web.app","appId":"1:886523447594:web:6499f3238144a654ab7653","type":"DEFAULT_SITE"}]}
+[debug] [2024-07-31T21:26:58.315Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:886523447594:web:6499f3238144a654ab7653/config [none]
+[debug] [2024-07-31T21:26:58.872Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:886523447594:web:6499f3238144a654ab7653/config 200
+[debug] [2024-07-31T21:26:58.872Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:886523447594:web:6499f3238144a654ab7653/config {"projectId":"retroxsignup","appId":"1:886523447594:web:6499f3238144a654ab7653","storageBucket":"retroxsignup.appspot.com","apiKey":"AIzaSyD6ggz1I8umelE6B8gCJmRXsfOf_MjasW4","authDomain":"retroxsignup.firebaseapp.com","messagingSenderId":"886523447594","measurementId":"G-5MRPXLM12N"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-07-31T21:27:00.254Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/retroxsignup/sites/retroxsignup [none]
+[debug] [2024-07-31T21:27:00.374Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/retroxsignup/sites/retroxsignup 200
+[debug] [2024-07-31T21:27:00.374Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/retroxsignup/sites/retroxsignup {"name":"projects/retroxsignup/sites/retroxsignup","defaultUrl":"https://retroxsignup.web.app","appId":"1:886523447594:web:6499f3238144a654ab7653","type":"DEFAULT_SITE"}
+[info]   ▲ Next.js 14.2.5
+
+[info]   - Environments: .env
+
+
+[info]    Creating an optimized production build ...
+
+[info] 
+
+
+[info] Source path: /Users/chunchun/Src/wucc95/nextjs-mvp/landingpage/src/app/globals.css
+
+[info] Setting up new context...
+
+[info] Finding changed files: 4.953ms
+
+[info] Reading changed files: 48.925ms
+
+[info] Sorting candidates: 4.997ms
+
+[info] Generate rules: 59.556ms
+
+[info] Build stylesheet: 1.512ms
+
+[info] Potential classes:  10718
+
+[info] Active contexts:  1
+
+[info] JIT TOTAL: 278.293ms
+
+
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info] 
+./src/components/landing/LandingMarquee.tsx
+54:6  Warning: React Hook useEffect has a missing dependency: 'animationDurationInSeconds'. Either include it or remove the dependency array. If '_setAnimationDuration' needs the current value of 'animationDurationInSeconds', you can also switch to useReducer instead of useState and read 'animationDurationInSeconds' in the reducer.  react-hooks/exhaustive-deps
+
+./src/components/landing/rating/LandingRating.tsx
+21:7  Warning: aria-description: This attribute is an invalid ARIA attribute.  jsx-a11y/aria-props
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/5) ...
+
+[info]    Generating static pages (1/5) 
+   Generating static pages (2/5) 
+   Generating static pages (3/5) 
+
+[info]  ✓ Generating static pages (5/5)
+
+[info]    Finalizing page optimization ...
+
+[info]    Collecting build traces ...
+
+[info] 
+
+[info] Route (app)                              Size     First Load JS
+┌ ○ /                                    248 kB          335 kB
+└ ○ /_not-found                          875 B          87.9 kB
++ First Load JS shared by all            87 kB
+  ├ chunks/23-ca2f42c4d6c5818a.js        31.5 kB
+  ├ chunks/fd9d1056-b5a92993d8b19688.js  53.7 kB
+  └ other shared chunks (total)          1.85 kB
+
+
+
+[info] ○  (Static)  prerendered as static content
+
+
+[debug] [2024-07-31T21:27:08.037Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "us-east1"
+      },
+      "site": "retroxsignup",
+      "rewrites": [],
+      "redirects": [],
+      "headers": [
+        {
+          "source": "/_not-found",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"
+            }
+          ]
+        },
+        {
+          "source": "/favicon.ico",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "image/x-icon"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"
+            }
+          ]
+        },
+        {
+          "source": "**/*.[jt]s",
+          "headers": [
+            {
+              "key": "Set-Cookie",
+              "value": "__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoicmV0cm94c2lnbnVwIiwiYXBwSWQiOiIxOjg4NjUyMzQ0NzU5NDp3ZWI6NjQ5OWYzMjM4MTQ0YTY1NGFiNzY1MyIsInN0b3JhZ2VCdWNrZXQiOiJyZXRyb3hzaWdudXAuYXBwc3BvdC5jb20iLCJhcGlLZXkiOiJBSXphU3lENmdnejFJOHVtZWxFNkI4Z0NKbVJYc2ZPZl9NamFzVzQiLCJhdXRoRG9tYWluIjoicmV0cm94c2lnbnVwLmZpcmViYXNlYXBwLmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiODg2NTIzNDQ3NTk0IiwibWVhc3VyZW1lbnRJZCI6IkctNU1SUFhMTTEyTiJ9fQ; SameSite=Strict; Expires=2026-06-26T08:07:08.037Z; Path=/;"
+            }
+          ]
+        }
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false,
+      "public": ".firebase/retroxsignup/hosting",
+      "webFramework": "next"
+    }
+  ]
+}
+[info] 
+[info] === Deploying to 'retroxsignup'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-07-31T21:27:08.039Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/versions [none]
+[debug] [2024-07-31T21:27:08.039Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next"}}
+[debug] [2024-07-31T21:27:08.597Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/versions 200
+[debug] [2024-07-31T21:27:08.597Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/versions {"name":"projects/886523447594/sites/retroxsignup/versions/984a0c97580ffc89","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next"}}
+[info] i  hosting[retroxsignup]: beginning deploy... 
+[info] i  hosting[retroxsignup]: found 33 files in .firebase/retroxsignup/hosting 
+[debug] [2024-07-31T21:27:08.618Z] [hosting] uploading with 200 concurrency
+[debug] [2024-07-31T21:27:08.659Z] [hosting] hash cache [LmZpcmViYXNlL3JldHJveHNpZ251cC9ob3N0aW5n] stored for 33 files
+[debug] [2024-07-31T21:27:08.660Z] [hosting][hash queue][FINAL] {"max":37,"min":12,"avg":16.575757575757574,"active":0,"complete":33,"success":33,"errored":0,"retried":0,"total":33,"elapsed":40}
+[debug] [2024-07-31T21:27:08.660Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/886523447594/sites/retroxsignup/versions/984a0c97580ffc89:populateFiles [none]
+[debug] [2024-07-31T21:27:08.660Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/886523447594/sites/retroxsignup/versions/984a0c97580ffc89:populateFiles {"files":{"/vercel.svg":"4b9c0f01017bb87197f2ae0bd9717239fadf854131b34cce7b0f74ff6d513a4b","/next.svg":"33c5c6ad1d08bb69d8026289530e377b4d6e2a96f24562e209fd1e1e9ccee64a","/logo-full.png":"34e2f679b3cff4e522dfc44b9a8b9c24aa77b9da9d3c81981c20e4c790ceb27d","/404.html":"f961f74f1100e89378d0c865e6a4e4559645c0380e7ab5a0d2505b2dbfc8ec76","/_next/static/zxvDE_G9G-Oxhae0I3wQ7/_ssgManifest.js":"02dbc1aeab6ef0a6ff2ff9a1643158cf9bb38929945eaa343a3627dee9ba6778","/_next/static/zxvDE_G9G-Oxhae0I3wQ7/_buildManifest.js":"dc04af83043d7ff2aef02c819fd3264c1debc6bc02062be5a4d98b8459aff06b","/drawing.svg":"3c2b5a7c4b8af58cb16735869ebf6ff43e720fa9bcedc28590448b47ebc52897","/_next/static/media/19e37deead9b3ec2-s.woff2":"b1ceef85ddd5ec248e772129eb3163a28d146431145e44a82789454fabe135e7","/_next/static/media/9beef36ab83de3f0-s.woff2":"79274fbf14335c602d34648f0165aedba2480d21cc13cf15855761c8234d24e8","/_next/static/media/062522b8b7c3ad6a-s.woff2":"706ec847f242651a0e037d52eb6bc8f179209c3b448cba0b11ef315bd4c0f116","/_next/static/chunks/webpack-ce11082de337290b.js":"43f1675ce81c5bbb738bb35ab5555cdc90266c2a01d756405bf75a0e15a43108","/_next/static/chunks/main-app-f524260eb96d6f11.js":"fb508cc07687dd05badb80e4cc6b62f3770981123659672727a617a7589c6879","/_next/static/css/62bea3f7973efe73.css":"e27fb3ba6e08057d756f2c2c2ccf71e4070e1f64d8842ca26a379180bf90c711","/favicon.ico":"04614fc32690cb60b39e472119b7f7aa91d88eaeb8511a7489f8cbe1552e6e59","/_next/static/chunks/pages/_error-1be831200e60c5c0.js":"1cfb58b3e6408c2262a28b2452786746c26bf62dd6d7f1e22b1b31d51cef0f57","/_next/static/chunks/pages/_app-6a626577ffa902a4.js":"4984fb60c47b9a81edd93d7228d8f88b77158b879485a749ea21eeb86543b604","/_next/static/chunks/app/_not-found/page-29a638a720c32a03.js":"a7c32fdc97a576aeba3a8c3dd04667d2fed96c18097d657c6eef4ed1a830416a","/_next/static/chunks/app/layout-bc201b3a51ad5566.js":"f6188aa5dcb8c6980950aa73629b0797d6507ed48b3d3622587eafbcc264ee02","/_next/static/media/faac4ac11aa3d97b-s.woff2":"0d923d7fcca83c75c4f35e8e6fd4e5d7924984f8c132091ae0a7bfd7b80d9f9e","/_next/static/media/e6f5886ae1242622-s.woff2":"3bca5bb15eb0bd485e5080e67a032a6b28a7315587ce6cd22b6140260ad66a84","/_next/static/media/6fed4e5749a3ea15-s.woff2":"0439dd7b118d6bdf2193e3bd7075ac6038799468b9cb5572218feb4a5f2b4965","/_next/static/media/dd4ab5b525bd804a-s.woff2":"b6c2d6d90a9baa876d3f5c64e3efddcac2b6a83939ec58b8546307e14ccc0489","/_next/static/media/83651bee47cf14da-s.woff2":"7757585b2721b190f3c8225e5791a8f8872e51b977648ce49b3de4e902270cbe","/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js":"76f0b40a22fd1d40b34e6072089550d8573c7207c510dc41038d823c7fa3c369","/_next/static/media/3d9ea938b6afa941-s.p.woff2":"34c1817d5f80688b14f0845fa61f7329688ba65e1c99020369dc577479cb6056","/_next/static/chunks/23-ca2f42c4d6c5818a.js":"579ea1d90aafff86e43444e1e050f96512527a87ad8c32aab440995f720369ba","/_next/static/media/46392699924ae7e5-s.woff2":"564b1577e0ba39d530203cfd2fdd150e79c8b52cf951d28d04358c5d2387e42e","/_next/static/chunks/main-8ca56de745a96baa.js":"76df504260470eed0e9e05e7716c90ee1b203cba6221692028ea6b6df1dd09fd","/_next/static/chunks/275-45313df3bba2c6f3.js":"0a2f0f8722ecc1864b9733c119475bb11bfbc9d56fc7db88e6e609843c02c422","/_next/static/chunks/framework-f66176bb897dc684.js":"e51c9b43f7b8c240ad3c8868dd8dcb9cf640a26d54418031257188af27fc589f","/_next/static/chunks/fd9d1056-b5a92993d8b19688.js":"8bee4697d5abe216785d5b630c3ff34e8c627e90b5376c3cceb028aab8bbcbec","/index.html":"745748d8e1b023406e294116cf10d65fc77d3c0da45baa6d12e375d4d4cdc1f5","/_next/static/chunks/app/page-5495e64130828081.js":"ef29a24ed1a402d047c72043d62dcedc0bfeef2dd384984c228aa55bc49cff21"}}
+[debug] [2024-07-31T21:27:08.834Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/886523447594/sites/retroxsignup/versions/984a0c97580ffc89:populateFiles 200
+[debug] [2024-07-31T21:27:08.835Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/886523447594/sites/retroxsignup/versions/984a0c97580ffc89:populateFiles {"uploadRequiredHashes":["34c1817d5f80688b14f0845fa61f7329688ba65e1c99020369dc577479cb6056","0d923d7fcca83c75c4f35e8e6fd4e5d7924984f8c132091ae0a7bfd7b80d9f9e","04614fc32690cb60b39e472119b7f7aa91d88eaeb8511a7489f8cbe1552e6e59","f961f74f1100e89378d0c865e6a4e4559645c0380e7ab5a0d2505b2dbfc8ec76","dc04af83043d7ff2aef02c819fd3264c1debc6bc02062be5a4d98b8459aff06b","0439dd7b118d6bdf2193e3bd7075ac6038799468b9cb5572218feb4a5f2b4965","8bee4697d5abe216785d5b630c3ff34e8c627e90b5376c3cceb028aab8bbcbec","43f1675ce81c5bbb738bb35ab5555cdc90266c2a01d756405bf75a0e15a43108","ef29a24ed1a402d047c72043d62dcedc0bfeef2dd384984c228aa55bc49cff21","76df504260470eed0e9e05e7716c90ee1b203cba6221692028ea6b6df1dd09fd","76f0b40a22fd1d40b34e6072089550d8573c7207c510dc41038d823c7fa3c369","0a2f0f8722ecc1864b9733c119475bb11bfbc9d56fc7db88e6e609843c02c422","e27fb3ba6e08057d756f2c2c2ccf71e4070e1f64d8842ca26a379180bf90c711","4984fb60c47b9a81edd93d7228d8f88b77158b879485a749ea21eeb86543b604","3bca5bb15eb0bd485e5080e67a032a6b28a7315587ce6cd22b6140260ad66a84","7757585b2721b190f3c8225e5791a8f8872e51b977648ce49b3de4e902270cbe","e51c9b43f7b8c240ad3c8868dd8dcb9cf640a26d54418031257188af27fc589f","745748d8e1b023406e294116cf10d65fc77d3c0da45baa6d12e375d4d4cdc1f5","3c2b5a7c4b8af58cb16735869ebf6ff43e720fa9bcedc28590448b47ebc52897","b6c2d6d90a9baa876d3f5c64e3efddcac2b6a83939ec58b8546307e14ccc0489","33c5c6ad1d08bb69d8026289530e377b4d6e2a96f24562e209fd1e1e9ccee64a","34e2f679b3cff4e522dfc44b9a8b9c24aa77b9da9d3c81981c20e4c790ceb27d","1cfb58b3e6408c2262a28b2452786746c26bf62dd6d7f1e22b1b31d51cef0f57","f6188aa5dcb8c6980950aa73629b0797d6507ed48b3d3622587eafbcc264ee02","a7c32fdc97a576aeba3a8c3dd04667d2fed96c18097d657c6eef4ed1a830416a","4b9c0f01017bb87197f2ae0bd9717239fadf854131b34cce7b0f74ff6d513a4b","564b1577e0ba39d530203cfd2fdd150e79c8b52cf951d28d04358c5d2387e42e","579ea1d90aafff86e43444e1e050f96512527a87ad8c32aab440995f720369ba"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files"}
+[debug] [2024-07-31T21:27:08.838Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/34c1817d5f80688b14f0845fa61f7329688ba65e1c99020369dc577479cb6056 [none]
+[debug] [2024-07-31T21:27:08.838Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/34c1817d5f80688b14f0845fa61f7329688ba65e1c99020369dc577479cb6056 [stream]
+[debug] [2024-07-31T21:27:08.840Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/0d923d7fcca83c75c4f35e8e6fd4e5d7924984f8c132091ae0a7bfd7b80d9f9e [none]
+[debug] [2024-07-31T21:27:08.840Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/0d923d7fcca83c75c4f35e8e6fd4e5d7924984f8c132091ae0a7bfd7b80d9f9e [stream]
+[debug] [2024-07-31T21:27:08.842Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/04614fc32690cb60b39e472119b7f7aa91d88eaeb8511a7489f8cbe1552e6e59 [none]
+[debug] [2024-07-31T21:27:08.843Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/04614fc32690cb60b39e472119b7f7aa91d88eaeb8511a7489f8cbe1552e6e59 [stream]
+[debug] [2024-07-31T21:27:08.846Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/f961f74f1100e89378d0c865e6a4e4559645c0380e7ab5a0d2505b2dbfc8ec76 [none]
+[debug] [2024-07-31T21:27:08.846Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/f961f74f1100e89378d0c865e6a4e4559645c0380e7ab5a0d2505b2dbfc8ec76 [stream]
+[debug] [2024-07-31T21:27:08.848Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/dc04af83043d7ff2aef02c819fd3264c1debc6bc02062be5a4d98b8459aff06b [none]
+[debug] [2024-07-31T21:27:08.848Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/dc04af83043d7ff2aef02c819fd3264c1debc6bc02062be5a4d98b8459aff06b [stream]
+[debug] [2024-07-31T21:27:08.850Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/0439dd7b118d6bdf2193e3bd7075ac6038799468b9cb5572218feb4a5f2b4965 [none]
+[debug] [2024-07-31T21:27:08.850Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/0439dd7b118d6bdf2193e3bd7075ac6038799468b9cb5572218feb4a5f2b4965 [stream]
+[debug] [2024-07-31T21:27:08.851Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/8bee4697d5abe216785d5b630c3ff34e8c627e90b5376c3cceb028aab8bbcbec [none]
+[debug] [2024-07-31T21:27:08.851Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/8bee4697d5abe216785d5b630c3ff34e8c627e90b5376c3cceb028aab8bbcbec [stream]
+[debug] [2024-07-31T21:27:08.851Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/43f1675ce81c5bbb738bb35ab5555cdc90266c2a01d756405bf75a0e15a43108 [none]
+[debug] [2024-07-31T21:27:08.851Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/43f1675ce81c5bbb738bb35ab5555cdc90266c2a01d756405bf75a0e15a43108 [stream]
+[debug] [2024-07-31T21:27:08.852Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/ef29a24ed1a402d047c72043d62dcedc0bfeef2dd384984c228aa55bc49cff21 [none]
+[debug] [2024-07-31T21:27:08.852Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/ef29a24ed1a402d047c72043d62dcedc0bfeef2dd384984c228aa55bc49cff21 [stream]
+[debug] [2024-07-31T21:27:08.854Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/76df504260470eed0e9e05e7716c90ee1b203cba6221692028ea6b6df1dd09fd [none]
+[debug] [2024-07-31T21:27:08.854Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/76df504260470eed0e9e05e7716c90ee1b203cba6221692028ea6b6df1dd09fd [stream]
+[debug] [2024-07-31T21:27:08.854Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/76f0b40a22fd1d40b34e6072089550d8573c7207c510dc41038d823c7fa3c369 [none]
+[debug] [2024-07-31T21:27:08.854Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/76f0b40a22fd1d40b34e6072089550d8573c7207c510dc41038d823c7fa3c369 [stream]
+[debug] [2024-07-31T21:27:08.855Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/0a2f0f8722ecc1864b9733c119475bb11bfbc9d56fc7db88e6e609843c02c422 [none]
+[debug] [2024-07-31T21:27:08.855Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/0a2f0f8722ecc1864b9733c119475bb11bfbc9d56fc7db88e6e609843c02c422 [stream]
+[debug] [2024-07-31T21:27:08.855Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/e27fb3ba6e08057d756f2c2c2ccf71e4070e1f64d8842ca26a379180bf90c711 [none]
+[debug] [2024-07-31T21:27:08.855Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/e27fb3ba6e08057d756f2c2c2ccf71e4070e1f64d8842ca26a379180bf90c711 [stream]
+[debug] [2024-07-31T21:27:08.856Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/4984fb60c47b9a81edd93d7228d8f88b77158b879485a749ea21eeb86543b604 [none]
+[debug] [2024-07-31T21:27:08.856Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/4984fb60c47b9a81edd93d7228d8f88b77158b879485a749ea21eeb86543b604 [stream]
+[debug] [2024-07-31T21:27:08.856Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/3bca5bb15eb0bd485e5080e67a032a6b28a7315587ce6cd22b6140260ad66a84 [none]
+[debug] [2024-07-31T21:27:08.856Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/3bca5bb15eb0bd485e5080e67a032a6b28a7315587ce6cd22b6140260ad66a84 [stream]
+[debug] [2024-07-31T21:27:08.857Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/7757585b2721b190f3c8225e5791a8f8872e51b977648ce49b3de4e902270cbe [none]
+[debug] [2024-07-31T21:27:08.857Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/7757585b2721b190f3c8225e5791a8f8872e51b977648ce49b3de4e902270cbe [stream]
+[debug] [2024-07-31T21:27:08.857Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/e51c9b43f7b8c240ad3c8868dd8dcb9cf640a26d54418031257188af27fc589f [none]
+[debug] [2024-07-31T21:27:08.857Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/e51c9b43f7b8c240ad3c8868dd8dcb9cf640a26d54418031257188af27fc589f [stream]
+[debug] [2024-07-31T21:27:08.858Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/745748d8e1b023406e294116cf10d65fc77d3c0da45baa6d12e375d4d4cdc1f5 [none]
+[debug] [2024-07-31T21:27:08.858Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/745748d8e1b023406e294116cf10d65fc77d3c0da45baa6d12e375d4d4cdc1f5 [stream]
+[debug] [2024-07-31T21:27:08.858Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/3c2b5a7c4b8af58cb16735869ebf6ff43e720fa9bcedc28590448b47ebc52897 [none]
+[debug] [2024-07-31T21:27:08.858Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/3c2b5a7c4b8af58cb16735869ebf6ff43e720fa9bcedc28590448b47ebc52897 [stream]
+[debug] [2024-07-31T21:27:08.859Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/b6c2d6d90a9baa876d3f5c64e3efddcac2b6a83939ec58b8546307e14ccc0489 [none]
+[debug] [2024-07-31T21:27:08.859Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/b6c2d6d90a9baa876d3f5c64e3efddcac2b6a83939ec58b8546307e14ccc0489 [stream]
+[debug] [2024-07-31T21:27:08.860Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/33c5c6ad1d08bb69d8026289530e377b4d6e2a96f24562e209fd1e1e9ccee64a [none]
+[debug] [2024-07-31T21:27:08.860Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/33c5c6ad1d08bb69d8026289530e377b4d6e2a96f24562e209fd1e1e9ccee64a [stream]
+[debug] [2024-07-31T21:27:08.860Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/34e2f679b3cff4e522dfc44b9a8b9c24aa77b9da9d3c81981c20e4c790ceb27d [none]
+[debug] [2024-07-31T21:27:08.860Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/34e2f679b3cff4e522dfc44b9a8b9c24aa77b9da9d3c81981c20e4c790ceb27d [stream]
+[debug] [2024-07-31T21:27:08.860Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/1cfb58b3e6408c2262a28b2452786746c26bf62dd6d7f1e22b1b31d51cef0f57 [none]
+[debug] [2024-07-31T21:27:08.860Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/1cfb58b3e6408c2262a28b2452786746c26bf62dd6d7f1e22b1b31d51cef0f57 [stream]
+[debug] [2024-07-31T21:27:08.861Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/f6188aa5dcb8c6980950aa73629b0797d6507ed48b3d3622587eafbcc264ee02 [none]
+[debug] [2024-07-31T21:27:08.861Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/f6188aa5dcb8c6980950aa73629b0797d6507ed48b3d3622587eafbcc264ee02 [stream]
+[debug] [2024-07-31T21:27:08.861Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/a7c32fdc97a576aeba3a8c3dd04667d2fed96c18097d657c6eef4ed1a830416a [none]
+[debug] [2024-07-31T21:27:08.861Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/a7c32fdc97a576aeba3a8c3dd04667d2fed96c18097d657c6eef4ed1a830416a [stream]
+[debug] [2024-07-31T21:27:08.862Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/4b9c0f01017bb87197f2ae0bd9717239fadf854131b34cce7b0f74ff6d513a4b [none]
+[debug] [2024-07-31T21:27:08.862Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/4b9c0f01017bb87197f2ae0bd9717239fadf854131b34cce7b0f74ff6d513a4b [stream]
+[debug] [2024-07-31T21:27:08.862Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/564b1577e0ba39d530203cfd2fdd150e79c8b52cf951d28d04358c5d2387e42e [none]
+[debug] [2024-07-31T21:27:08.862Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/564b1577e0ba39d530203cfd2fdd150e79c8b52cf951d28d04358c5d2387e42e [stream]
+[debug] [2024-07-31T21:27:08.862Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/579ea1d90aafff86e43444e1e050f96512527a87ad8c32aab440995f720369ba [none]
+[debug] [2024-07-31T21:27:08.862Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/579ea1d90aafff86e43444e1e050f96512527a87ad8c32aab440995f720369ba [stream]
+[debug] [2024-07-31T21:27:08.863Z] [hosting][populate queue][FINAL] {"max":180,"min":180,"avg":180,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":205}
+[debug] [2024-07-31T21:27:08.863Z] [hosting] uploads queued: 28
+[debug] [2024-07-31T21:27:09.427Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/04614fc32690cb60b39e472119b7f7aa91d88eaeb8511a7489f8cbe1552e6e59 200
+[debug] [2024-07-31T21:27:09.427Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/04614fc32690cb60b39e472119b7f7aa91d88eaeb8511a7489f8cbe1552e6e59 [stream]
+[debug] [2024-07-31T21:27:09.428Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/43f1675ce81c5bbb738bb35ab5555cdc90266c2a01d756405bf75a0e15a43108 200
+[debug] [2024-07-31T21:27:09.428Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/43f1675ce81c5bbb738bb35ab5555cdc90266c2a01d756405bf75a0e15a43108 [stream]
+[debug] [2024-07-31T21:27:09.429Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/4984fb60c47b9a81edd93d7228d8f88b77158b879485a749ea21eeb86543b604 200
+[debug] [2024-07-31T21:27:09.429Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/4984fb60c47b9a81edd93d7228d8f88b77158b879485a749ea21eeb86543b604 [stream]
+[debug] [2024-07-31T21:27:09.429Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/0439dd7b118d6bdf2193e3bd7075ac6038799468b9cb5572218feb4a5f2b4965 200
+[debug] [2024-07-31T21:27:09.429Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/0439dd7b118d6bdf2193e3bd7075ac6038799468b9cb5572218feb4a5f2b4965 [stream]
+[debug] [2024-07-31T21:27:09.429Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/564b1577e0ba39d530203cfd2fdd150e79c8b52cf951d28d04358c5d2387e42e 200
+[debug] [2024-07-31T21:27:09.429Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/564b1577e0ba39d530203cfd2fdd150e79c8b52cf951d28d04358c5d2387e42e [stream]
+[debug] [2024-07-31T21:27:09.429Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/dc04af83043d7ff2aef02c819fd3264c1debc6bc02062be5a4d98b8459aff06b 200
+[debug] [2024-07-31T21:27:09.429Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/dc04af83043d7ff2aef02c819fd3264c1debc6bc02062be5a4d98b8459aff06b [stream]
+[debug] [2024-07-31T21:27:09.429Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/76f0b40a22fd1d40b34e6072089550d8573c7207c510dc41038d823c7fa3c369 200
+[debug] [2024-07-31T21:27:09.430Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/76f0b40a22fd1d40b34e6072089550d8573c7207c510dc41038d823c7fa3c369 [stream]
+[debug] [2024-07-31T21:27:09.432Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/b6c2d6d90a9baa876d3f5c64e3efddcac2b6a83939ec58b8546307e14ccc0489 200
+[debug] [2024-07-31T21:27:09.432Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/b6c2d6d90a9baa876d3f5c64e3efddcac2b6a83939ec58b8546307e14ccc0489 [stream]
+[debug] [2024-07-31T21:27:09.432Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/34e2f679b3cff4e522dfc44b9a8b9c24aa77b9da9d3c81981c20e4c790ceb27d 200
+[debug] [2024-07-31T21:27:09.433Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/34e2f679b3cff4e522dfc44b9a8b9c24aa77b9da9d3c81981c20e4c790ceb27d [stream]
+[debug] [2024-07-31T21:27:09.433Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/3c2b5a7c4b8af58cb16735869ebf6ff43e720fa9bcedc28590448b47ebc52897 200
+[debug] [2024-07-31T21:27:09.433Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/3c2b5a7c4b8af58cb16735869ebf6ff43e720fa9bcedc28590448b47ebc52897 [stream]
+[debug] [2024-07-31T21:27:09.433Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/e51c9b43f7b8c240ad3c8868dd8dcb9cf640a26d54418031257188af27fc589f 200
+[debug] [2024-07-31T21:27:09.433Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/e51c9b43f7b8c240ad3c8868dd8dcb9cf640a26d54418031257188af27fc589f [stream]
+[debug] [2024-07-31T21:27:09.434Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/4b9c0f01017bb87197f2ae0bd9717239fadf854131b34cce7b0f74ff6d513a4b 200
+[debug] [2024-07-31T21:27:09.434Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/4b9c0f01017bb87197f2ae0bd9717239fadf854131b34cce7b0f74ff6d513a4b [stream]
+[debug] [2024-07-31T21:27:09.437Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/579ea1d90aafff86e43444e1e050f96512527a87ad8c32aab440995f720369ba 200
+[debug] [2024-07-31T21:27:09.437Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/579ea1d90aafff86e43444e1e050f96512527a87ad8c32aab440995f720369ba [stream]
+[debug] [2024-07-31T21:27:09.437Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/34c1817d5f80688b14f0845fa61f7329688ba65e1c99020369dc577479cb6056 200
+[debug] [2024-07-31T21:27:09.437Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/34c1817d5f80688b14f0845fa61f7329688ba65e1c99020369dc577479cb6056 [stream]
+[debug] [2024-07-31T21:27:09.437Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/8bee4697d5abe216785d5b630c3ff34e8c627e90b5376c3cceb028aab8bbcbec 200
+[debug] [2024-07-31T21:27:09.437Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/8bee4697d5abe216785d5b630c3ff34e8c627e90b5376c3cceb028aab8bbcbec [stream]
+[debug] [2024-07-31T21:27:09.438Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/7757585b2721b190f3c8225e5791a8f8872e51b977648ce49b3de4e902270cbe 200
+[debug] [2024-07-31T21:27:09.438Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/7757585b2721b190f3c8225e5791a8f8872e51b977648ce49b3de4e902270cbe [stream]
+[debug] [2024-07-31T21:27:09.440Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/33c5c6ad1d08bb69d8026289530e377b4d6e2a96f24562e209fd1e1e9ccee64a 200
+[debug] [2024-07-31T21:27:09.440Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/33c5c6ad1d08bb69d8026289530e377b4d6e2a96f24562e209fd1e1e9ccee64a [stream]
+[debug] [2024-07-31T21:27:09.444Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/a7c32fdc97a576aeba3a8c3dd04667d2fed96c18097d657c6eef4ed1a830416a 200
+[debug] [2024-07-31T21:27:09.444Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/a7c32fdc97a576aeba3a8c3dd04667d2fed96c18097d657c6eef4ed1a830416a [stream]
+[debug] [2024-07-31T21:27:09.445Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/0d923d7fcca83c75c4f35e8e6fd4e5d7924984f8c132091ae0a7bfd7b80d9f9e 200
+[debug] [2024-07-31T21:27:09.445Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/0d923d7fcca83c75c4f35e8e6fd4e5d7924984f8c132091ae0a7bfd7b80d9f9e [stream]
+[debug] [2024-07-31T21:27:09.445Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/3bca5bb15eb0bd485e5080e67a032a6b28a7315587ce6cd22b6140260ad66a84 200
+[debug] [2024-07-31T21:27:09.445Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/3bca5bb15eb0bd485e5080e67a032a6b28a7315587ce6cd22b6140260ad66a84 [stream]
+[debug] [2024-07-31T21:27:09.445Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/1cfb58b3e6408c2262a28b2452786746c26bf62dd6d7f1e22b1b31d51cef0f57 200
+[debug] [2024-07-31T21:27:09.445Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/1cfb58b3e6408c2262a28b2452786746c26bf62dd6d7f1e22b1b31d51cef0f57 [stream]
+[debug] [2024-07-31T21:27:09.472Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/f6188aa5dcb8c6980950aa73629b0797d6507ed48b3d3622587eafbcc264ee02 200
+[debug] [2024-07-31T21:27:09.472Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/f6188aa5dcb8c6980950aa73629b0797d6507ed48b3d3622587eafbcc264ee02 [stream]
+[debug] [2024-07-31T21:27:09.519Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/ef29a24ed1a402d047c72043d62dcedc0bfeef2dd384984c228aa55bc49cff21 200
+[debug] [2024-07-31T21:27:09.519Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/ef29a24ed1a402d047c72043d62dcedc0bfeef2dd384984c228aa55bc49cff21 [stream]
+[debug] [2024-07-31T21:27:09.534Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/e27fb3ba6e08057d756f2c2c2ccf71e4070e1f64d8842ca26a379180bf90c711 200
+[debug] [2024-07-31T21:27:09.535Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/e27fb3ba6e08057d756f2c2c2ccf71e4070e1f64d8842ca26a379180bf90c711 [stream]
+[debug] [2024-07-31T21:27:09.542Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/f961f74f1100e89378d0c865e6a4e4559645c0380e7ab5a0d2505b2dbfc8ec76 200
+[debug] [2024-07-31T21:27:09.542Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/f961f74f1100e89378d0c865e6a4e4559645c0380e7ab5a0d2505b2dbfc8ec76 [stream]
+[debug] [2024-07-31T21:27:09.551Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/0a2f0f8722ecc1864b9733c119475bb11bfbc9d56fc7db88e6e609843c02c422 200
+[debug] [2024-07-31T21:27:09.551Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/0a2f0f8722ecc1864b9733c119475bb11bfbc9d56fc7db88e6e609843c02c422 [stream]
+[debug] [2024-07-31T21:27:09.615Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/745748d8e1b023406e294116cf10d65fc77d3c0da45baa6d12e375d4d4cdc1f5 200
+[debug] [2024-07-31T21:27:09.615Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/745748d8e1b023406e294116cf10d65fc77d3c0da45baa6d12e375d4d4cdc1f5 [stream]
+[debug] [2024-07-31T21:27:09.832Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/76df504260470eed0e9e05e7716c90ee1b203cba6221692028ea6b6df1dd09fd 200
+[debug] [2024-07-31T21:27:09.833Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/984a0c97580ffc89/files/76df504260470eed0e9e05e7716c90ee1b203cba6221692028ea6b6df1dd09fd [stream]
+[debug] [2024-07-31T21:27:09.833Z] [hosting][upload queue][FINAL] {"max":996,"min":591,"avg":634.6428571428571,"active":0,"complete":28,"success":28,"errored":0,"retried":0,"total":28,"elapsed":998}
+[info] i  hosting: upload complete 
+[info] ✔  hosting[retroxsignup]: file upload complete 
+[debug] [2024-07-31T21:27:09.835Z] [hosting] deploy completed after 1233ms
+[debug] [2024-07-31T21:27:09.835Z] [
+  {
+    "config": {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "us-east1"
+      },
+      "site": "retroxsignup",
+      "rewrites": [],
+      "redirects": [],
+      "headers": [
+        {
+          "source": "/_not-found",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"
+            }
+          ]
+        },
+        {
+          "source": "/favicon.ico",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "image/x-icon"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"
+            }
+          ]
+        },
+        {
+          "source": "**/*.[jt]s",
+          "headers": [
+            {
+              "key": "Set-Cookie",
+              "value": "__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoicmV0cm94c2lnbnVwIiwiYXBwSWQiOiIxOjg4NjUyMzQ0NzU5NDp3ZWI6NjQ5OWYzMjM4MTQ0YTY1NGFiNzY1MyIsInN0b3JhZ2VCdWNrZXQiOiJyZXRyb3hzaWdudXAuYXBwc3BvdC5jb20iLCJhcGlLZXkiOiJBSXphU3lENmdnejFJOHVtZWxFNkI4Z0NKbVJYc2ZPZl9NamFzVzQiLCJhdXRoRG9tYWluIjoicmV0cm94c2lnbnVwLmZpcmViYXNlYXBwLmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiODg2NTIzNDQ3NTk0IiwibWVhc3VyZW1lbnRJZCI6IkctNU1SUFhMTTEyTiJ9fQ; SameSite=Strict; Expires=2026-06-26T08:07:08.037Z; Path=/;"
+            }
+          ]
+        }
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false,
+      "public": ".firebase/retroxsignup/hosting",
+      "webFramework": "next"
+    },
+    "version": "projects/886523447594/sites/retroxsignup/versions/984a0c97580ffc89"
+  }
+]
+[info] i  hosting[retroxsignup]: finalizing version... 
+[debug] [2024-07-31T21:27:09.837Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/versions/984a0c97580ffc89 updateMask=status%2Cconfig
+[debug] [2024-07-31T21:27:09.837Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/versions/984a0c97580ffc89 {"status":"FINALIZED","config":{"rewrites":[],"redirects":[],"headers":[{"glob":"/_not-found","headers":{"x-next-cache-tags":"_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"}},{"glob":"/favicon.ico","headers":{"cache-control":"public, max-age=0, must-revalidate","content-type":"image/x-icon","x-next-cache-tags":"_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"}},{"glob":"**/*.[jt]s","headers":{"Set-Cookie":"__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoicmV0cm94c2lnbnVwIiwiYXBwSWQiOiIxOjg4NjUyMzQ0NzU5NDp3ZWI6NjQ5OWYzMjM4MTQ0YTY1NGFiNzY1MyIsInN0b3JhZ2VCdWNrZXQiOiJyZXRyb3hzaWdudXAuYXBwc3BvdC5jb20iLCJhcGlLZXkiOiJBSXphU3lENmdnejFJOHVtZWxFNkI4Z0NKbVJYc2ZPZl9NamFzVzQiLCJhdXRoRG9tYWluIjoicmV0cm94c2lnbnVwLmZpcmViYXNlYXBwLmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiODg2NTIzNDQ3NTk0IiwibWVhc3VyZW1lbnRJZCI6IkctNU1SUFhMTTEyTiJ9fQ; SameSite=Strict; Expires=2026-06-26T08:07:08.037Z; Path=/;"}}],"cleanUrls":true,"trailingSlashBehavior":"REMOVE"}}
+[debug] [2024-07-31T21:27:09.968Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/versions/984a0c97580ffc89 200
+[debug] [2024-07-31T21:27:09.969Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/versions/984a0c97580ffc89 {"name":"projects/886523447594/sites/retroxsignup/versions/984a0c97580ffc89","status":"FINALIZED","config":{"headers":[{"headers":{"x-next-cache-tags":"_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"},"glob":"/_not-found"},{"headers":{"cache-control":"public, max-age=0, must-revalidate","content-type":"image/x-icon","x-next-cache-tags":"_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"},"glob":"/favicon.ico"},{"headers":{"Set-Cookie":"__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoicmV0cm94c2lnbnVwIiwiYXBwSWQiOiIxOjg4NjUyMzQ0NzU5NDp3ZWI6NjQ5OWYzMjM4MTQ0YTY1NGFiNzY1MyIsInN0b3JhZ2VCdWNrZXQiOiJyZXRyb3hzaWdudXAuYXBwc3BvdC5jb20iLCJhcGlLZXkiOiJBSXphU3lENmdnejFJOHVtZWxFNkI4Z0NKbVJYc2ZPZl9NamFzVzQiLCJhdXRoRG9tYWluIjoicmV0cm94c2lnbnVwLmZpcmViYXNlYXBwLmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiODg2NTIzNDQ3NTk0IiwibWVhc3VyZW1lbnRJZCI6IkctNU1SUFhMTTEyTiJ9fQ; SameSite=Strict; Expires=2026-06-26T08:07:08.037Z; Path=/;"},"glob":"**/*.[jt]s"}],"cleanUrls":true,"trailingSlashBehavior":"REMOVE"},"labels":{"firebase-web-framework":"next","deployment-tool":"cli-firebase"},"createTime":"2024-07-31T21:27:08.314915Z","createUser":{"email":"chunchun@retrox.io"},"finalizeTime":"2024-07-31T21:27:09.958153Z","finalizeUser":{"email":"chunchun@retrox.io"}}
+[debug] [2024-07-31T21:27:09.969Z] [hosting] finalized version for retroxsignup:[object Object]
+[info] ✔  hosting[retroxsignup]: version finalized 
+[info] i  hosting[retroxsignup]: releasing new version... 
+[debug] [2024-07-31T21:27:09.970Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/channels/live/releases versionName=projects%2F886523447594%2Fsites%2Fretroxsignup%2Fversions%2F984a0c97580ffc89
+[debug] [2024-07-31T21:27:09.970Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/channels/live/releases {}
+[debug] [2024-07-31T21:27:10.206Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/channels/live/releases 200
+[debug] [2024-07-31T21:27:10.207Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/channels/live/releases {"name":"projects/886523447594/sites/retroxsignup/channels/live/releases/1722461229646000","version":{"name":"projects/886523447594/sites/retroxsignup/versions/984a0c97580ffc89","status":"FINALIZED","config":{"headers":[{"headers":{"x-next-cache-tags":"_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"},"glob":"/_not-found"},{"headers":{"cache-control":"public, max-age=0, must-revalidate","content-type":"image/x-icon","x-next-cache-tags":"_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"},"glob":"/favicon.ico"},{"headers":{"Set-Cookie":"__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoicmV0cm94c2lnbnVwIiwiYXBwSWQiOiIxOjg4NjUyMzQ0NzU5NDp3ZWI6NjQ5OWYzMjM4MTQ0YTY1NGFiNzY1MyIsInN0b3JhZ2VCdWNrZXQiOiJyZXRyb3hzaWdudXAuYXBwc3BvdC5jb20iLCJhcGlLZXkiOiJBSXphU3lENmdnejFJOHVtZWxFNkI4Z0NKbVJYc2ZPZl9NamFzVzQiLCJhdXRoRG9tYWluIjoicmV0cm94c2lnbnVwLmZpcmViYXNlYXBwLmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiODg2NTIzNDQ3NTk0IiwibWVhc3VyZW1lbnRJZCI6IkctNU1SUFhMTTEyTiJ9fQ; SameSite=Strict; Expires=2026-06-26T08:07:08.037Z; Path=/;"},"glob":"**/*.[jt]s"}],"cleanUrls":true,"trailingSlashBehavior":"REMOVE"},"labels":{"firebase-web-framework":"next","deployment-tool":"cli-firebase"},"createTime":"2024-07-31T21:27:08.314915Z","createUser":{"email":"chunchun@retrox.io","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJSbF8R5TzqMYFMtaNFMM_GYBiIL-VRvCQ2TXNb2orM0GFKdQ=mo"},"finalizeTime":"2024-07-31T21:27:09.958153Z","finalizeUser":{"email":"chunchun@retrox.io","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJSbF8R5TzqMYFMtaNFMM_GYBiIL-VRvCQ2TXNb2orM0GFKdQ=mo"}},"type":"DEPLOY","releaseTime":"2024-07-31T21:27:09.646Z","releaseUser":{"email":"chunchun@retrox.io","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJSbF8R5TzqMYFMtaNFMM_GYBiIL-VRvCQ2TXNb2orM0GFKdQ=mo"}}
+[debug] [2024-07-31T21:27:10.207Z] [hosting] release: {"name":"projects/886523447594/sites/retroxsignup/channels/live/releases/1722461229646000","version":{"name":"projects/886523447594/sites/retroxsignup/versions/984a0c97580ffc89","status":"FINALIZED","config":{"headers":[{"headers":{"x-next-cache-tags":"_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"},"glob":"/_not-found"},{"headers":{"cache-control":"public, max-age=0, must-revalidate","content-type":"image/x-icon","x-next-cache-tags":"_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"},"glob":"/favicon.ico"},{"headers":{"Set-Cookie":"__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoicmV0cm94c2lnbnVwIiwiYXBwSWQiOiIxOjg4NjUyMzQ0NzU5NDp3ZWI6NjQ5OWYzMjM4MTQ0YTY1NGFiNzY1MyIsInN0b3JhZ2VCdWNrZXQiOiJyZXRyb3hzaWdudXAuYXBwc3BvdC5jb20iLCJhcGlLZXkiOiJBSXphU3lENmdnejFJOHVtZWxFNkI4Z0NKbVJYc2ZPZl9NamFzVzQiLCJhdXRoRG9tYWluIjoicmV0cm94c2lnbnVwLmZpcmViYXNlYXBwLmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiODg2NTIzNDQ3NTk0IiwibWVhc3VyZW1lbnRJZCI6IkctNU1SUFhMTTEyTiJ9fQ; SameSite=Strict; Expires=2026-06-26T08:07:08.037Z; Path=/;"},"glob":"**/*.[jt]s"}],"cleanUrls":true,"trailingSlashBehavior":"REMOVE"},"labels":{"firebase-web-framework":"next","deployment-tool":"cli-firebase"},"createTime":"2024-07-31T21:27:08.314915Z","createUser":{"email":"chunchun@retrox.io","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJSbF8R5TzqMYFMtaNFMM_GYBiIL-VRvCQ2TXNb2orM0GFKdQ=mo"},"finalizeTime":"2024-07-31T21:27:09.958153Z","finalizeUser":{"email":"chunchun@retrox.io","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJSbF8R5TzqMYFMtaNFMM_GYBiIL-VRvCQ2TXNb2orM0GFKdQ=mo"}},"type":"DEPLOY","releaseTime":"2024-07-31T21:27:09.646Z","releaseUser":{"email":"chunchun@retrox.io","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJSbF8R5TzqMYFMtaNFMM_GYBiIL-VRvCQ2TXNb2orM0GFKdQ=mo"}}
+[info] ✔  hosting[retroxsignup]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/retroxsignup/overview
+[info] Hosting URL: https://retroxsignup.web.app
+[debug] [2024-07-31T21:40:48.733Z] ----------------------------------------------------------------------
+[debug] [2024-07-31T21:40:48.734Z] Command:       /opt/homebrew/Cellar/node/22.2.0/bin/node /opt/homebrew/bin/firebase deploy --debug
+[debug] [2024-07-31T21:40:48.735Z] CLI Version:   13.14.2
+[debug] [2024-07-31T21:40:48.735Z] Platform:      darwin
+[debug] [2024-07-31T21:40:48.735Z] Node Version:  v22.2.0
+[debug] [2024-07-31T21:40:48.735Z] Time:          Wed Jul 31 2024 17:40:48 GMT-0400 (Eastern Daylight Time)
+[debug] [2024-07-31T21:40:48.735Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-31T21:40:48.765Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-31T21:40:48.766Z] > authorizing via signed-in user (chunchun@retrox.io)
+[debug] [2024-07-31T21:40:48.766Z] [iam] checking project retroxsignup for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-07-31T21:40:48.766Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/retroxsignup:testIamPermissions [none]
+[debug] [2024-07-31T21:40:48.766Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/retroxsignup:testIamPermissions x-goog-quota-user=projects/retroxsignup
+[debug] [2024-07-31T21:40:48.766Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/retroxsignup:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-31T21:40:48.994Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/retroxsignup:testIamPermissions 200
+[debug] [2024-07-31T21:40:48.994Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/retroxsignup:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-31T21:40:48.995Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/retroxsignup [none]
+[debug] [2024-07-31T21:40:49.255Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/retroxsignup 200
+[debug] [2024-07-31T21:40:49.255Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/retroxsignup {"projectId":"retroxsignup","projectNumber":"886523447594","displayName":"retroxsignup","name":"projects/retroxsignup","resources":{"hostingSite":"retroxsignup"},"state":"ACTIVE","etag":"1_c7404e5e-c7de-4a38-af63-7f98e1804c0e"}
+[debug] [2024-07-31T21:40:49.913Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/retroxsignup/sites pageToken=&pageSize=10
+[debug] [2024-07-31T21:40:50.371Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/retroxsignup/sites 200
+[debug] [2024-07-31T21:40:50.372Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/retroxsignup/sites {"sites":[{"name":"projects/retroxsignup/sites/retroxsignup","defaultUrl":"https://retroxsignup.web.app","appId":"1:886523447594:web:6499f3238144a654ab7653","type":"DEFAULT_SITE"}]}
+[debug] [2024-07-31T21:40:50.372Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:886523447594:web:6499f3238144a654ab7653/config [none]
+[debug] [2024-07-31T21:40:50.855Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:886523447594:web:6499f3238144a654ab7653/config 200
+[debug] [2024-07-31T21:40:50.855Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:886523447594:web:6499f3238144a654ab7653/config {"projectId":"retroxsignup","appId":"1:886523447594:web:6499f3238144a654ab7653","storageBucket":"retroxsignup.appspot.com","apiKey":"AIzaSyD6ggz1I8umelE6B8gCJmRXsfOf_MjasW4","authDomain":"retroxsignup.firebaseapp.com","messagingSenderId":"886523447594","measurementId":"G-5MRPXLM12N"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-07-31T21:40:52.131Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/retroxsignup/sites/retroxsignup [none]
+[debug] [2024-07-31T21:40:52.252Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/retroxsignup/sites/retroxsignup 200
+[debug] [2024-07-31T21:40:52.252Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/retroxsignup/sites/retroxsignup {"name":"projects/retroxsignup/sites/retroxsignup","defaultUrl":"https://retroxsignup.web.app","appId":"1:886523447594:web:6499f3238144a654ab7653","type":"DEFAULT_SITE"}
+[info]   ▲ Next.js 14.2.5
+
+[info]   - Environments: .env
+
+
+[info]    Creating an optimized production build ...
+
+[info] 
+
+
+[info] Source path: /Users/chunchun/Src/wucc95/nextjs-mvp/landingpage/src/app/globals.css
+
+[info] Setting up new context...
+
+[info] Finding changed files: 6.11ms
+
+[info] Reading changed files: 58.9ms
+
+[info] Sorting candidates: 5.59ms
+
+[info] Generate rules: 68.761ms
+
+[info] Build stylesheet: 1.627ms
+
+[info] Potential classes:  10718
+
+[info] Active contexts:  1
+
+[info] JIT TOTAL: 297.765ms
+
+
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info] 
+./src/components/landing/LandingMarquee.tsx
+54:6  Warning: React Hook useEffect has a missing dependency: 'animationDurationInSeconds'. Either include it or remove the dependency array. If '_setAnimationDuration' needs the current value of 'animationDurationInSeconds', you can also switch to useReducer instead of useState and read 'animationDurationInSeconds' in the reducer.  react-hooks/exhaustive-deps
+
+./src/components/landing/rating/LandingRating.tsx
+21:7  Warning: aria-description: This attribute is an invalid ARIA attribute.  jsx-a11y/aria-props
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/5) ...
+
+[info]    Generating static pages (1/5) 
+
+[info]    Generating static pages (2/5) 
+   Generating static pages (3/5) 
+
+[info]  ✓ Generating static pages (5/5)
+
+[info]    Finalizing page optimization ...
+   Collecting build traces ...
+
+[info] 
+
+[info] Route (app)                              Size     First Load JS
+┌ ○ /                                    248 kB          335 kB
+└ ○ /_not-found                          875 B          87.9 kB
++ First Load JS shared by all            87 kB
+  ├ chunks/23-ca2f42c4d6c5818a.js        31.5 kB
+  ├ chunks/fd9d1056-b5a92993d8b19688.js  53.7 kB
+  └ other shared chunks (total)          1.85 kB
+
+
+[info] 
+○  (Static)  prerendered as static content
+
+
+[debug] [2024-07-31T21:40:59.520Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "us-east1"
+      },
+      "site": "retroxsignup",
+      "rewrites": [],
+      "redirects": [],
+      "headers": [
+        {
+          "source": "/_not-found",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"
+            }
+          ]
+        },
+        {
+          "source": "/favicon.ico",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "image/x-icon"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"
+            }
+          ]
+        },
+        {
+          "source": "**/*.[jt]s",
+          "headers": [
+            {
+              "key": "Set-Cookie",
+              "value": "__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoicmV0cm94c2lnbnVwIiwiYXBwSWQiOiIxOjg4NjUyMzQ0NzU5NDp3ZWI6NjQ5OWYzMjM4MTQ0YTY1NGFiNzY1MyIsInN0b3JhZ2VCdWNrZXQiOiJyZXRyb3hzaWdudXAuYXBwc3BvdC5jb20iLCJhcGlLZXkiOiJBSXphU3lENmdnejFJOHVtZWxFNkI4Z0NKbVJYc2ZPZl9NamFzVzQiLCJhdXRoRG9tYWluIjoicmV0cm94c2lnbnVwLmZpcmViYXNlYXBwLmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiODg2NTIzNDQ3NTk0IiwibWVhc3VyZW1lbnRJZCI6IkctNU1SUFhMTTEyTiJ9fQ; SameSite=Strict; Expires=2026-06-26T08:20:59.520Z; Path=/;"
+            }
+          ]
+        }
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false,
+      "public": ".firebase/retroxsignup/hosting",
+      "webFramework": "next"
+    }
+  ]
+}
+[info] 
+[info] === Deploying to 'retroxsignup'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-07-31T21:40:59.523Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/versions [none]
+[debug] [2024-07-31T21:40:59.523Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next"}}
+[debug] [2024-07-31T21:41:00.256Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/versions 200
+[debug] [2024-07-31T21:41:00.257Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/versions {"name":"projects/886523447594/sites/retroxsignup/versions/3db7d22db49b708f","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next"}}
+[info] i  hosting[retroxsignup]: beginning deploy... 
+[info] i  hosting[retroxsignup]: found 33 files in .firebase/retroxsignup/hosting 
+[debug] [2024-07-31T21:41:00.273Z] [hosting] uploading with 200 concurrency
+[debug] [2024-07-31T21:41:00.304Z] [hosting] hash cache [LmZpcmViYXNlL3JldHJveHNpZ251cC9ob3N0aW5n] stored for 33 files
+[debug] [2024-07-31T21:41:00.304Z] [hosting][hash queue][FINAL] {"max":29,"min":9,"avg":12.515151515151516,"active":0,"complete":33,"success":33,"errored":0,"retried":0,"total":33,"elapsed":30}
+[debug] [2024-07-31T21:41:00.304Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/886523447594/sites/retroxsignup/versions/3db7d22db49b708f:populateFiles [none]
+[debug] [2024-07-31T21:41:00.304Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/886523447594/sites/retroxsignup/versions/3db7d22db49b708f:populateFiles {"files":{"/vercel.svg":"4b9c0f01017bb87197f2ae0bd9717239fadf854131b34cce7b0f74ff6d513a4b","/next.svg":"33c5c6ad1d08bb69d8026289530e377b4d6e2a96f24562e209fd1e1e9ccee64a","/logo-full.png":"34e2f679b3cff4e522dfc44b9a8b9c24aa77b9da9d3c81981c20e4c790ceb27d","/favicon.ico":"a699a163c5e1a024175531c4e0288e585ed2628bbe4a8177d8bd9970e206fc81","/drawing.svg":"3c2b5a7c4b8af58cb16735869ebf6ff43e720fa9bcedc28590448b47ebc52897","/404.html":"4e34a8845d36ae6248629017b2752e221985329521bf0f1757a2a07355c28a95","/_next/static/media/062522b8b7c3ad6a-s.woff2":"706ec847f242651a0e037d52eb6bc8f179209c3b448cba0b11ef315bd4c0f116","/_next/static/media/9beef36ab83de3f0-s.woff2":"79274fbf14335c602d34648f0165aedba2480d21cc13cf15855761c8234d24e8","/_next/static/chunks/webpack-ce11082de337290b.js":"43f1675ce81c5bbb738bb35ab5555cdc90266c2a01d756405bf75a0e15a43108","/_next/static/chunks/main-app-f524260eb96d6f11.js":"fb508cc07687dd05badb80e4cc6b62f3770981123659672727a617a7589c6879","/_next/static/media/19e37deead9b3ec2-s.woff2":"b1ceef85ddd5ec248e772129eb3163a28d146431145e44a82789454fabe135e7","/_next/static/css/62bea3f7973efe73.css":"e27fb3ba6e08057d756f2c2c2ccf71e4070e1f64d8842ca26a379180bf90c711","/_next/static/chunks/pages/_error-1be831200e60c5c0.js":"1cfb58b3e6408c2262a28b2452786746c26bf62dd6d7f1e22b1b31d51cef0f57","/_next/static/chunks/pages/_app-6a626577ffa902a4.js":"4984fb60c47b9a81edd93d7228d8f88b77158b879485a749ea21eeb86543b604","/_next/static/chunks/app/_not-found/page-29a638a720c32a03.js":"a7c32fdc97a576aeba3a8c3dd04667d2fed96c18097d657c6eef4ed1a830416a","/_next/static/Z8m07lRZqIhbWpePn0-fG/_ssgManifest.js":"02dbc1aeab6ef0a6ff2ff9a1643158cf9bb38929945eaa343a3627dee9ba6778","/_next/static/Z8m07lRZqIhbWpePn0-fG/_buildManifest.js":"dc04af83043d7ff2aef02c819fd3264c1debc6bc02062be5a4d98b8459aff06b","/_next/static/chunks/app/layout-bc201b3a51ad5566.js":"f6188aa5dcb8c6980950aa73629b0797d6507ed48b3d3622587eafbcc264ee02","/_next/static/media/e6f5886ae1242622-s.woff2":"3bca5bb15eb0bd485e5080e67a032a6b28a7315587ce6cd22b6140260ad66a84","/_next/static/media/dd4ab5b525bd804a-s.woff2":"b6c2d6d90a9baa876d3f5c64e3efddcac2b6a83939ec58b8546307e14ccc0489","/_next/static/media/6fed4e5749a3ea15-s.woff2":"0439dd7b118d6bdf2193e3bd7075ac6038799468b9cb5572218feb4a5f2b4965","/_next/static/media/faac4ac11aa3d97b-s.woff2":"0d923d7fcca83c75c4f35e8e6fd4e5d7924984f8c132091ae0a7bfd7b80d9f9e","/_next/static/media/46392699924ae7e5-s.woff2":"564b1577e0ba39d530203cfd2fdd150e79c8b52cf951d28d04358c5d2387e42e","/_next/static/media/83651bee47cf14da-s.woff2":"7757585b2721b190f3c8225e5791a8f8872e51b977648ce49b3de4e902270cbe","/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js":"76f0b40a22fd1d40b34e6072089550d8573c7207c510dc41038d823c7fa3c369","/_next/static/chunks/main-8ca56de745a96baa.js":"76df504260470eed0e9e05e7716c90ee1b203cba6221692028ea6b6df1dd09fd","/_next/static/media/3d9ea938b6afa941-s.p.woff2":"34c1817d5f80688b14f0845fa61f7329688ba65e1c99020369dc577479cb6056","/_next/static/chunks/23-ca2f42c4d6c5818a.js":"579ea1d90aafff86e43444e1e050f96512527a87ad8c32aab440995f720369ba","/_next/static/chunks/275-45313df3bba2c6f3.js":"0a2f0f8722ecc1864b9733c119475bb11bfbc9d56fc7db88e6e609843c02c422","/_next/static/chunks/framework-f66176bb897dc684.js":"e51c9b43f7b8c240ad3c8868dd8dcb9cf640a26d54418031257188af27fc589f","/_next/static/chunks/fd9d1056-b5a92993d8b19688.js":"8bee4697d5abe216785d5b630c3ff34e8c627e90b5376c3cceb028aab8bbcbec","/_next/static/chunks/app/page-5495e64130828081.js":"ef29a24ed1a402d047c72043d62dcedc0bfeef2dd384984c228aa55bc49cff21","/index.html":"bea7933e7dc8722f15e7df5ee9666f0c406b53a3e5c04d2319ba7e499bed01b1"}}
+[debug] [2024-07-31T21:41:00.561Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/886523447594/sites/retroxsignup/versions/3db7d22db49b708f:populateFiles 200
+[debug] [2024-07-31T21:41:00.561Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/886523447594/sites/retroxsignup/versions/3db7d22db49b708f:populateFiles {"uploadRequiredHashes":["bea7933e7dc8722f15e7df5ee9666f0c406b53a3e5c04d2319ba7e499bed01b1","4e34a8845d36ae6248629017b2752e221985329521bf0f1757a2a07355c28a95","a699a163c5e1a024175531c4e0288e585ed2628bbe4a8177d8bd9970e206fc81"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/3db7d22db49b708f/files"}
+[debug] [2024-07-31T21:41:00.563Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/3db7d22db49b708f/files/bea7933e7dc8722f15e7df5ee9666f0c406b53a3e5c04d2319ba7e499bed01b1 [none]
+[debug] [2024-07-31T21:41:00.563Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/3db7d22db49b708f/files/bea7933e7dc8722f15e7df5ee9666f0c406b53a3e5c04d2319ba7e499bed01b1 [stream]
+[debug] [2024-07-31T21:41:00.566Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/3db7d22db49b708f/files/4e34a8845d36ae6248629017b2752e221985329521bf0f1757a2a07355c28a95 [none]
+[debug] [2024-07-31T21:41:00.566Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/3db7d22db49b708f/files/4e34a8845d36ae6248629017b2752e221985329521bf0f1757a2a07355c28a95 [stream]
+[debug] [2024-07-31T21:41:00.568Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/3db7d22db49b708f/files/a699a163c5e1a024175531c4e0288e585ed2628bbe4a8177d8bd9970e206fc81 [none]
+[debug] [2024-07-31T21:41:00.569Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/3db7d22db49b708f/files/a699a163c5e1a024175531c4e0288e585ed2628bbe4a8177d8bd9970e206fc81 [stream]
+[debug] [2024-07-31T21:41:00.570Z] [hosting][populate queue][FINAL] {"max":260,"min":260,"avg":260,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":267}
+[debug] [2024-07-31T21:41:00.570Z] [hosting] uploads queued: 3
+[debug] [2024-07-31T21:41:01.210Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/3db7d22db49b708f/files/4e34a8845d36ae6248629017b2752e221985329521bf0f1757a2a07355c28a95 200
+[debug] [2024-07-31T21:41:01.210Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/3db7d22db49b708f/files/4e34a8845d36ae6248629017b2752e221985329521bf0f1757a2a07355c28a95 [stream]
+[debug] [2024-07-31T21:41:01.342Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/3db7d22db49b708f/files/bea7933e7dc8722f15e7df5ee9666f0c406b53a3e5c04d2319ba7e499bed01b1 200
+[debug] [2024-07-31T21:41:01.342Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/3db7d22db49b708f/files/bea7933e7dc8722f15e7df5ee9666f0c406b53a3e5c04d2319ba7e499bed01b1 [stream]
+[debug] [2024-07-31T21:41:01.344Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/3db7d22db49b708f/files/a699a163c5e1a024175531c4e0288e585ed2628bbe4a8177d8bd9970e206fc81 200
+[debug] [2024-07-31T21:41:01.344Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/retroxsignup/versions/3db7d22db49b708f/files/a699a163c5e1a024175531c4e0288e585ed2628bbe4a8177d8bd9970e206fc81 [stream]
+[debug] [2024-07-31T21:41:01.344Z] [hosting][upload queue][FINAL] {"max":782,"min":649,"avg":737.3333333333334,"active":0,"complete":3,"success":3,"errored":0,"retried":0,"total":3,"elapsed":782}
+[info] i  hosting: upload complete 
+[info] ✔  hosting[retroxsignup]: file upload complete 
+[debug] [2024-07-31T21:41:01.345Z] [hosting] deploy completed after 1086ms
+[debug] [2024-07-31T21:41:01.345Z] [
+  {
+    "config": {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "us-east1"
+      },
+      "site": "retroxsignup",
+      "rewrites": [],
+      "redirects": [],
+      "headers": [
+        {
+          "source": "/_not-found",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"
+            }
+          ]
+        },
+        {
+          "source": "/favicon.ico",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "image/x-icon"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"
+            }
+          ]
+        },
+        {
+          "source": "**/*.[jt]s",
+          "headers": [
+            {
+              "key": "Set-Cookie",
+              "value": "__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoicmV0cm94c2lnbnVwIiwiYXBwSWQiOiIxOjg4NjUyMzQ0NzU5NDp3ZWI6NjQ5OWYzMjM4MTQ0YTY1NGFiNzY1MyIsInN0b3JhZ2VCdWNrZXQiOiJyZXRyb3hzaWdudXAuYXBwc3BvdC5jb20iLCJhcGlLZXkiOiJBSXphU3lENmdnejFJOHVtZWxFNkI4Z0NKbVJYc2ZPZl9NamFzVzQiLCJhdXRoRG9tYWluIjoicmV0cm94c2lnbnVwLmZpcmViYXNlYXBwLmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiODg2NTIzNDQ3NTk0IiwibWVhc3VyZW1lbnRJZCI6IkctNU1SUFhMTTEyTiJ9fQ; SameSite=Strict; Expires=2026-06-26T08:20:59.520Z; Path=/;"
+            }
+          ]
+        }
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false,
+      "public": ".firebase/retroxsignup/hosting",
+      "webFramework": "next"
+    },
+    "version": "projects/886523447594/sites/retroxsignup/versions/3db7d22db49b708f"
+  }
+]
+[info] i  hosting[retroxsignup]: finalizing version... 
+[debug] [2024-07-31T21:41:01.348Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/versions/3db7d22db49b708f updateMask=status%2Cconfig
+[debug] [2024-07-31T21:41:01.348Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/versions/3db7d22db49b708f {"status":"FINALIZED","config":{"rewrites":[],"redirects":[],"headers":[{"glob":"/_not-found","headers":{"x-next-cache-tags":"_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"}},{"glob":"/favicon.ico","headers":{"cache-control":"public, max-age=0, must-revalidate","content-type":"image/x-icon","x-next-cache-tags":"_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"}},{"glob":"**/*.[jt]s","headers":{"Set-Cookie":"__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoicmV0cm94c2lnbnVwIiwiYXBwSWQiOiIxOjg4NjUyMzQ0NzU5NDp3ZWI6NjQ5OWYzMjM4MTQ0YTY1NGFiNzY1MyIsInN0b3JhZ2VCdWNrZXQiOiJyZXRyb3hzaWdudXAuYXBwc3BvdC5jb20iLCJhcGlLZXkiOiJBSXphU3lENmdnejFJOHVtZWxFNkI4Z0NKbVJYc2ZPZl9NamFzVzQiLCJhdXRoRG9tYWluIjoicmV0cm94c2lnbnVwLmZpcmViYXNlYXBwLmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiODg2NTIzNDQ3NTk0IiwibWVhc3VyZW1lbnRJZCI6IkctNU1SUFhMTTEyTiJ9fQ; SameSite=Strict; Expires=2026-06-26T08:20:59.520Z; Path=/;"}}],"cleanUrls":true,"trailingSlashBehavior":"REMOVE"}}
+[debug] [2024-07-31T21:41:01.482Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/versions/3db7d22db49b708f 200
+[debug] [2024-07-31T21:41:01.483Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/versions/3db7d22db49b708f {"name":"projects/886523447594/sites/retroxsignup/versions/3db7d22db49b708f","status":"FINALIZED","config":{"headers":[{"headers":{"x-next-cache-tags":"_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"},"glob":"/_not-found"},{"headers":{"x-next-cache-tags":"_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico","cache-control":"public, max-age=0, must-revalidate","content-type":"image/x-icon"},"glob":"/favicon.ico"},{"headers":{"Set-Cookie":"__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoicmV0cm94c2lnbnVwIiwiYXBwSWQiOiIxOjg4NjUyMzQ0NzU5NDp3ZWI6NjQ5OWYzMjM4MTQ0YTY1NGFiNzY1MyIsInN0b3JhZ2VCdWNrZXQiOiJyZXRyb3hzaWdudXAuYXBwc3BvdC5jb20iLCJhcGlLZXkiOiJBSXphU3lENmdnejFJOHVtZWxFNkI4Z0NKbVJYc2ZPZl9NamFzVzQiLCJhdXRoRG9tYWluIjoicmV0cm94c2lnbnVwLmZpcmViYXNlYXBwLmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiODg2NTIzNDQ3NTk0IiwibWVhc3VyZW1lbnRJZCI6IkctNU1SUFhMTTEyTiJ9fQ; SameSite=Strict; Expires=2026-06-26T08:20:59.520Z; Path=/;"},"glob":"**/*.[jt]s"}],"cleanUrls":true,"trailingSlashBehavior":"REMOVE"},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next"},"createTime":"2024-07-31T21:40:59.838422Z","createUser":{"email":"chunchun@retrox.io"},"finalizeTime":"2024-07-31T21:41:01.420458Z","finalizeUser":{"email":"chunchun@retrox.io"}}
+[debug] [2024-07-31T21:41:01.483Z] [hosting] finalized version for retroxsignup:[object Object]
+[info] ✔  hosting[retroxsignup]: version finalized 
+[info] i  hosting[retroxsignup]: releasing new version... 
+[debug] [2024-07-31T21:41:01.484Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/channels/live/releases versionName=projects%2F886523447594%2Fsites%2Fretroxsignup%2Fversions%2F3db7d22db49b708f
+[debug] [2024-07-31T21:41:01.484Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/channels/live/releases {}
+[debug] [2024-07-31T21:41:01.666Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/channels/live/releases 200
+[debug] [2024-07-31T21:41:01.666Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/retroxsignup/channels/live/releases {"name":"projects/886523447594/sites/retroxsignup/channels/live/releases/1722462061082000","version":{"name":"projects/886523447594/sites/retroxsignup/versions/3db7d22db49b708f","status":"FINALIZED","config":{"headers":[{"headers":{"x-next-cache-tags":"_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"},"glob":"/_not-found"},{"headers":{"x-next-cache-tags":"_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico","cache-control":"public, max-age=0, must-revalidate","content-type":"image/x-icon"},"glob":"/favicon.ico"},{"headers":{"Set-Cookie":"__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoicmV0cm94c2lnbnVwIiwiYXBwSWQiOiIxOjg4NjUyMzQ0NzU5NDp3ZWI6NjQ5OWYzMjM4MTQ0YTY1NGFiNzY1MyIsInN0b3JhZ2VCdWNrZXQiOiJyZXRyb3hzaWdudXAuYXBwc3BvdC5jb20iLCJhcGlLZXkiOiJBSXphU3lENmdnejFJOHVtZWxFNkI4Z0NKbVJYc2ZPZl9NamFzVzQiLCJhdXRoRG9tYWluIjoicmV0cm94c2lnbnVwLmZpcmViYXNlYXBwLmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiODg2NTIzNDQ3NTk0IiwibWVhc3VyZW1lbnRJZCI6IkctNU1SUFhMTTEyTiJ9fQ; SameSite=Strict; Expires=2026-06-26T08:20:59.520Z; Path=/;"},"glob":"**/*.[jt]s"}],"cleanUrls":true,"trailingSlashBehavior":"REMOVE"},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next"},"createTime":"2024-07-31T21:40:59.838422Z","createUser":{"email":"chunchun@retrox.io","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJSbF8R5TzqMYFMtaNFMM_GYBiIL-VRvCQ2TXNb2orM0GFKdQ=mo"},"finalizeTime":"2024-07-31T21:41:01.420458Z","finalizeUser":{"email":"chunchun@retrox.io","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJSbF8R5TzqMYFMtaNFMM_GYBiIL-VRvCQ2TXNb2orM0GFKdQ=mo"}},"type":"DEPLOY","releaseTime":"2024-07-31T21:41:01.082Z","releaseUser":{"email":"chunchun@retrox.io","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJSbF8R5TzqMYFMtaNFMM_GYBiIL-VRvCQ2TXNb2orM0GFKdQ=mo"}}
+[debug] [2024-07-31T21:41:01.667Z] [hosting] release: {"name":"projects/886523447594/sites/retroxsignup/channels/live/releases/1722462061082000","version":{"name":"projects/886523447594/sites/retroxsignup/versions/3db7d22db49b708f","status":"FINALIZED","config":{"headers":[{"headers":{"x-next-cache-tags":"_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"},"glob":"/_not-found"},{"headers":{"x-next-cache-tags":"_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico","cache-control":"public, max-age=0, must-revalidate","content-type":"image/x-icon"},"glob":"/favicon.ico"},{"headers":{"Set-Cookie":"__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoicmV0cm94c2lnbnVwIiwiYXBwSWQiOiIxOjg4NjUyMzQ0NzU5NDp3ZWI6NjQ5OWYzMjM4MTQ0YTY1NGFiNzY1MyIsInN0b3JhZ2VCdWNrZXQiOiJyZXRyb3hzaWdudXAuYXBwc3BvdC5jb20iLCJhcGlLZXkiOiJBSXphU3lENmdnejFJOHVtZWxFNkI4Z0NKbVJYc2ZPZl9NamFzVzQiLCJhdXRoRG9tYWluIjoicmV0cm94c2lnbnVwLmZpcmViYXNlYXBwLmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiODg2NTIzNDQ3NTk0IiwibWVhc3VyZW1lbnRJZCI6IkctNU1SUFhMTTEyTiJ9fQ; SameSite=Strict; Expires=2026-06-26T08:20:59.520Z; Path=/;"},"glob":"**/*.[jt]s"}],"cleanUrls":true,"trailingSlashBehavior":"REMOVE"},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next"},"createTime":"2024-07-31T21:40:59.838422Z","createUser":{"email":"chunchun@retrox.io","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJSbF8R5TzqMYFMtaNFMM_GYBiIL-VRvCQ2TXNb2orM0GFKdQ=mo"},"finalizeTime":"2024-07-31T21:41:01.420458Z","finalizeUser":{"email":"chunchun@retrox.io","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJSbF8R5TzqMYFMtaNFMM_GYBiIL-VRvCQ2TXNb2orM0GFKdQ=mo"}},"type":"DEPLOY","releaseTime":"2024-07-31T21:41:01.082Z","releaseUser":{"email":"chunchun@retrox.io","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJSbF8R5TzqMYFMtaNFMM_GYBiIL-VRvCQ2TXNb2orM0GFKdQ=mo"}}
+[info] ✔  hosting[retroxsignup]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/retroxsignup/overview
+[info] Hosting URL: https://retroxsignup.web.app

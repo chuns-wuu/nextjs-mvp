@@ -2,12 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "../luke-portfolio"
-		},
-		{
-			"path": "../sreconnect/retrox.io"
 		}
 	],
 	"settings": {}

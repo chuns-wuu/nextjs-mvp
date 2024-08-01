@@ -34,17 +34,17 @@ export const LandingTestimonialInlineItem = ({
           </div>
         ) : null}
 
-        <div className="flex flex-col items-center text-xs truncate">
+        <div className="flex flex-col items-center text-xs">
           <LandingRating rating={5} />
 
           {text ? (
-            <p className="w-full mt-2 text-gray-500 truncate" title={text}>
+            <p className="w-full mt-2 text-gray-500" title={text}>
               &quot;{text}&quot;
             </p>
           ) : null}
 
           <p
-            className="w-full text-gray-500 truncate"
+            className="w-full text-gray-500"
             title={`${name}${suffix ? `, ${suffix}` : ''}`}
           >
             <b>{name}</b>

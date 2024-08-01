@@ -197,7 +197,7 @@ export const LandingPrimaryImageCtaSection = ({
             {imagePosition === 'left' || imagePosition === 'right' ? (
               <div
                 className={clsx(
-                  'lg:w-full lg:h-full w-[60%] items-center justify-between rounded-md relative z-10',
+                  'lg:w-full lg:h-full w-[95%] items-center justify-between rounded-md relative z-10',
                   imageShadow === 'soft' && 'shadow-md',
                   imageShadow === 'hard' && 'hard-shadow',
                   imagePerspective === 'left' && 'lg:perspective-left',
@@ -315,7 +315,7 @@ export const LandingPrimaryVideoCtaSection = ({
           textPosition={textPosition}
           leadingComponent={leadingComponent}
         >
-          {children}
+         
         </LandingPrimaryCtaContent>
 
         {videoSrc ? (
@@ -334,45 +334,25 @@ export const LandingPrimaryVideoCtaSection = ({
 
             {videoPosition === 'center' ? (
               <section className={clsx('w-full mt-6 md:mt-8')}>
-                {/* <VideoPlayer
+                <Image
                   className={clsx(
-                    'w-full rounded-md overflow-hidden',
-                    videoShadow === 'soft' && 'shadow-md',
-                    videoShadow === 'hard' && 'hard-shadow',
+                    'w-full rounded-md overflow-hidden'
                   )}
-                  poster={videoPoster}
-                  src={videoSrc}
-                  autoPlay={autoPlay}
-                  controls={controls}
-                  loop={loop}
-                  maxWidth={videoMaxWidth}
-                  variant={variant}
-                /> */}
-                <div></div>
+                  src="/dashboard.png" alt='dashboard'  width={800} height={1000}    />
               </section>
             ) : null}
 
             {videoPosition === 'left' || videoPosition === 'right' ? (
-              // <VideoPlayer
-              //   className={clsx(
-              //     'w-full rounded-md overflow-hidden',
-              //     videoShadow === 'soft' && 'shadow-md',
-              //     videoShadow === 'hard' && 'hard-shadow',
-              //   )}
-              //   poster={videoPoster}
-              //   src={videoSrc}
-              //   autoPlay={autoPlay}
-              //   controls={controls}
-              //   loop={loop}
-              //   maxWidth={videoMaxWidth}
-              //   variant={variant}
-              // />
-              <div></div>
+              <Image
+                className={clsx(
+                  'w-full rounded-md overflow-hidden'
+                )}
+                src="/dashboard.png" alt='dashboard' width={800} height={1000}   />
             ) : null}
           </>
         ) : null}
       </div>
-
+      {children}
       {footerComponent}
     </section>
   );
