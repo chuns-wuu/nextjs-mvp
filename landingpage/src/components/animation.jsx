@@ -161,7 +161,7 @@ export default function Animation(props) {
       initial="initial"
       animate="animate"
       transition="transition"
-      id="report box"
+      id="reports box"
     />
     <rect
       width={76.948}
@@ -296,9 +296,9 @@ export default function Animation(props) {
         y={87.531}
         style={{
           fontSize: "4.93889px",
-          fill: "#7fe982",
+          fill: "#000",
           fillOpacity: 1,
-          stroke: "#95d598",
+          stroke: "#000",
           strokeWidth: 0.108,
           strokeOpacity: 1,
           strokeDasharray: "none",
@@ -336,9 +336,9 @@ export default function Animation(props) {
         y={87.341}
         style={{
           fontSize: "4.93889px",
-          fill: "#7fe982",
+          fill: "#000",
           fillOpacity: 1,
-          stroke: "#95d598",
+          stroke: "#000",
           strokeWidth: 0.108,
           strokeOpacity: 1,
           strokeDasharray: "none",
@@ -354,7 +354,7 @@ export default function Animation(props) {
       y={109.744}
       ry={1.553}
       strokeWidth={0.471}
-      fill={"#dbf8d7"}
+      fill={"#def0b5"}
       fillOpacity={1}
       stroke={"#000"}
       variants={retroxVariants}
@@ -370,7 +370,7 @@ export default function Animation(props) {
       y={160.718}
       ry={1.565}
       stroke={"#bdbdbd"}
-      fill={"#dbf8d7"}
+      fill={"#def0b5"}
       fillOpacity={1}
       strokeWidth={0.371007}
       variants={alertVariants}
@@ -454,7 +454,7 @@ export default function Animation(props) {
           strokeOpacity: 1,
         }}
       >
-        {"reports"}
+        {"Reports"}
       </tspan>
     </text>
     <motion.rect
@@ -480,7 +480,7 @@ export default function Animation(props) {
       y={160.061}
       ry={1.56}
       stroke={"#bdbdbd"}
-      fill={"#dbf8d7"}
+      fill={"#def0b5"}
       fillOpacity={1}
       strokeWidth={0.397307}
       variants={alertVariants}
@@ -525,7 +525,7 @@ export default function Animation(props) {
           strokeOpacity: 1,
         }}
       >
-        {"alert management"}
+        {"Alert management"}
       </tspan>
     </text>
     <path
@@ -1168,9 +1168,9 @@ export default function Animation(props) {
         y={196.999}
         style={{
           fontSize: "4.93889px",
-          fill: "#7fe982",
+          fill: "#000",
           fillOpacity: 1,
-          stroke: "#95d598",
+          stroke: "#000",
           strokeWidth: 0.208,
           strokeOpacity: 1,
           strokeDasharray: "none",
@@ -1208,9 +1208,9 @@ export default function Animation(props) {
         y={177.752}
         style={{
           fontSize: "4.93889px",
-          fill: "#7fe982",
+          fill: "#000",
           fillOpacity: 1,
-          stroke: "#95d598",
+          stroke: "#000",
           strokeWidth: 0.108,
           strokeDasharray: "none",
           strokeOpacity: 1,
@@ -1248,9 +1248,9 @@ export default function Animation(props) {
         y={188.776}
         style={{
           fontSize: "4.93889px",
-          fill: "#7fe982",
+          fill: "#000",
           fillOpacity: 1,
-          stroke: "#95d598",
+          stroke: "#000",
           strokeWidth: 0.108,
           strokeDasharray: "none",
           strokeOpacity: 1,
@@ -1288,9 +1288,9 @@ export default function Animation(props) {
         y={185.132}
         style={{
           fontSize: "4.93889px",
-          fill: "#7fe982",
+          fill: "#000",
           fillOpacity: 1,
-          stroke: "#95d598",
+          stroke: "#000",
           strokeWidth: 0.108,
           strokeDasharray: "none",
           strokeOpacity: 1,
@@ -1303,9 +1303,9 @@ export default function Animation(props) {
         y={191.305}
         style={{
           fontSize: "4.93889px",
-          fill: "#7fe982",
+          fill: "#000",
           fillOpacity: 1,
-          stroke: "#95d598",
+          stroke: "#000",
           strokeWidth: 0.108,
           strokeDasharray: "none",
           strokeOpacity: 1,
@@ -1343,9 +1343,9 @@ export default function Animation(props) {
         y={200.415}
         style={{
           fontSize: "4.93889px",
-          fill: "#7fe982",
+          fill: "#000",
           fillOpacity: 1,
-          stroke: "#95d598",
+          stroke: "#000",
           strokeWidth: 0.108,
           strokeDasharray: "none",
           strokeOpacity: 1,
