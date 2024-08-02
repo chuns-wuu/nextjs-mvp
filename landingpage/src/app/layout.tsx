@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { Open_Sans } from 'next/font/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 //👇 Configure our font object
 const openSans = Open_Sans({
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={openSans.className}>{children}</body>
+      <GoogleAnalytics gaId="G-5MRPXLM12N" />
     </html>
   );
 }
