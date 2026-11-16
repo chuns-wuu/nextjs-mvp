@@ -30,6 +30,6 @@ Then, create a PR for merge requests. Add @chuns-wuu for review.
 
 ## Troubleshooting
 ### Firebase
-  1. node 20 is not supported. You can use `nvm use 18` to downgrade the version before you run `make firebase`
+  1. The project runs on Node 26 (pinned via `engines` in `package.json` and `.nvmrc`). Run `nvm use` in `nextjs-mvp/` or `landingpage/` before `make firebase`. If firebase-tools fails, update it with `npm i -g firebase-tools@latest`.
   2. "Got source token undefined for region us-xxx" or "CloudRunServiceNotFound" during firebase deployment can be resolved by manually granting the permission in the [Google console](https://console.cloud.google.com/functions/list?authuser=2&hl=en&project=retroxsignup) and redeploy on the UI as well.
 
