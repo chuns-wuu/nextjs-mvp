@@ -6,7 +6,7 @@ import TimelineForm from "@/components/v0/TimelineForm";
 import TitleForm from "@/components/v0/TitleForm";
 import { redirect, useParams, useRouter } from "next/navigation";
 
-export default function NewStep() {
+export default function WriteStep() {
   const params = useParams();
   const stepId = params.stepId;
   if(stepId == "0") 

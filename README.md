@@ -22,25 +22,25 @@ After an incident, engineers rarely have the time or energy to write a thorough 
 
 ## Demo
 
-The retrospective writer walks you through a postmortem step by step at `/new/0` → `/new/3`.
+The retrospective writer walks you through a postmortem step by step at `/write` (steps `/write/0` → `/write/3`).
 
 **Home** (`/`)
 
 ![Home](docs/screenshots/home.png)
 
-**Step 0 – Title** (`/new/0`)
+**Step 0 – Title** (`/write/0`)
 
 ![Step 0 – Title](docs/screenshots/step0-title.png)
 
-**Step 1 – Tech stack** (`/new/1`)
+**Step 1 – Tech stack** (`/write/1`)
 
 ![Step 1 – Tech stack](docs/screenshots/step1-services.png)
 
-**Step 2 – Actions taken** (`/new/2`): edit and drag to reorder the actions taken during the incident
+**Step 2 – Actions taken** (`/write/2`): edit and drag to reorder the actions taken during the incident
 
 ![Step 2 – Actions taken](docs/screenshots/step2-timeline.png)
 
-**Step 3 – Root causes** (`/new/3`): guided questions about the root cause
+**Step 3 – Root causes** (`/write/3`): guided questions about the root cause
 
 ![Step 3 – Root causes](docs/screenshots/step3-rca.png)
 
